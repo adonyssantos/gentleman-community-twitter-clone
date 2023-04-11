@@ -1,0 +1,59 @@
+{
+  "folders": [
+    {
+      "name": "✨ root",
+      "path": ".."
+    },
+    {
+      "name": "🚀 mobile",
+      "path": "../apps/mobile"
+    },
+    {
+      "name": "🚀 web",
+      "path": "../apps/web"
+    },
+    {
+      "name": "📦 @root/client",
+      "path": "../packages/client"
+    },
+    {
+      "name": "📦 @root/server",
+      "path": "../packages/server"
+    }
+  ],
+  "settings": {
+    "tailwindCSS.classAttributes": ["className", "tw", "variants"],
+    "tailwindCSS.experimental.configFile": {
+      "../apps/web/tailwind.config.js": ["../apps/**/*", "../packages/**/*"]
+    },
+    "files.exclude": {
+      "**/.git": true,
+      "**/.svn": true,
+      "**/.hg": true,
+      "**/CVS": true,
+      "**/.DS_Store": true,
+      "**/Thumbs.db": true,
+      "**/.turbo": true,
+      "**/.swc": true
+    },
+    "files.watcherExclude": {
+      "**/.git/objects/**": true,
+      "**/.git/subtree-cache/**": true,
+      "**/node_modules/*/**": true,
+      "**/.hg/store/**": true,
+      "**/dist/**": true
+    }
+  },
+  "extensions": {
+    "recommendations": [
+      "jamesinaxx.sort-package",
+      "bradlc.vscode-tailwindcss",
+      "prisma.prisma",
+      "prisma.prisma-insider",
+      "dsznajder.es7-react-js-snippets",
+      "dbaeumer.vscode-eslint",
+      "nrwl.angular-console",
+      "esbenp.prettier-vscode"
+    ]
+  }
+}
