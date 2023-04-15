@@ -6,7 +6,7 @@
     "packages/*"
   ],
   "scripts": {
-    "build:libs": "npx nx run-many --target=build --projects=\"@root/**\"",
+    "build:libs": "npx nx run build --project=@root/client",
     "mobile": "yarn lerna run start --scope mobile",
     "mobile:android": "yarn lerna run android --scope mobile",
     "mobile:ios": "yarn lerna run ios --scope mobile",
