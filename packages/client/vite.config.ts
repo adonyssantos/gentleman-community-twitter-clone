@@ -16,6 +16,7 @@ export default defineConfig({
         'react-native',
         'react',
         'react/jsx-runtime',
+        '@universal-labs/primitives'
       ],
       output: {
         dir: 'build',
