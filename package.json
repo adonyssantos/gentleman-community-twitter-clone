@@ -13,6 +13,10 @@
     "web:build": "yarn lerna run build --scope web",
     "web:preview": "yarn lerna run preview --scope web"
   },
+  "dependencies": {
+    "@changesets/cli": "^2.26.1",
+    "@prisma/client": "^4.11.0"
+  },
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "^4.1.1",
     "@types/node": "16.11.7",
@@ -35,9 +39,5 @@
     "typescript": "^4.9.5",
     "vite": "^4.1.0"
   },
-  "packageManager": "yarn@3.4.1",
-  "dependencies": {
-    "@changesets/cli": "^2.26.1",
-    "@prisma/client": "^4.11.0"
-  }
+  "packageManager": "yarn@3.4.1"
 }
