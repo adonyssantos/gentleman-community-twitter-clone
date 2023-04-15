@@ -3501,7 +3501,7 @@ __metadata:
     "@types/react": 18.0.28
     "@types/react-dom": 18.0.11
     "@types/react-native": ^0.71.3
-    "@universal-labs/primitives": ^1.6.0
+    "@universal-labs/primitives": ^1.9.3
     "@vitejs/plugin-react-swc": ^3.2.0
     react: 18.2.0
     react-dom: 18.2.0
@@ -4044,12 +4044,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@universal-labs/primitives@npm:^1.6.0":
-  version: 1.6.0
-  resolution: "@universal-labs/primitives@npm:1.6.0"
+"@universal-labs/primitives@npm:^1.9.3":
+  version: 1.9.3
+  resolution: "@universal-labs/primitives@npm:1.9.3"
   peerDependencies:
     react-native-web: ">= 0.18.10"
-  checksum: 7160f65c2b2205fcab0fae8459f3bf7a7b2dae62286fb116c6567c2c84a7b83cec59f1fbb9f1246c0327935ae962a8f16a0da87aea84571f5d0d6280d43696cb
+  checksum: fa8b5bea9b78353f440181d3478d8a2744154c05a40823676f62cb1f57dfdbf4bdb7713234223af33a720c49617b42be21896c356737af912f4547ef5f2dd37f
   languageName: node
   linkType: hard
 
@@ -15806,7 +15806,7 @@ __metadata:
     "@types/node": 18.15.0
     "@types/react": 18.0.28
     "@types/react-dom": 18.0.11
-    "@universal-labs/primitives": ^1.6.0
+    "@universal-labs/primitives": ^1.9.3
     autoprefixer: 10.4.14
     eslint: 8.36.0
     eslint-config-next: 13.1.4

@@ -6,12 +6,17 @@
     "packages/*"
   ],
   "scripts": {
+    "build:libs": "npx nx run build --project=@root/client",
     "mobile": "yarn lerna run start --scope mobile",
     "mobile:android": "yarn lerna run android --scope mobile",
     "mobile:ios": "yarn lerna run ios --scope mobile",
     "web": "yarn lerna run dev --scope web",
     "web:build": "yarn lerna run build --scope web",
     "web:preview": "yarn lerna run preview --scope web"
+  },
+  "dependencies": {
+    "@changesets/cli": "^2.26.1",
+    "@prisma/client": "^4.11.0"
   },
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "^4.1.1",
@@ -35,9 +40,5 @@
     "typescript": "^4.9.5",
     "vite": "^4.1.0"
   },
-  "packageManager": "yarn@3.4.1",
-  "dependencies": {
-    "@changesets/cli": "^2.26.1",
-    "@prisma/client": "^4.11.0"
-  }
+  "packageManager": "yarn@3.4.1"
 }

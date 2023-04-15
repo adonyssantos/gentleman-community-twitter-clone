@@ -4,10 +4,10 @@
   "private": true,
   "main": "src/index.ts",
   "scripts": {
-    "build": "vite build"
+    "build:libs": "vite build"
   },
   "dependencies": {
-    "@universal-labs/primitives": "^1.6.0"
+    "@universal-labs/primitives": "^1.9.3"
   },
   "devDependencies": {
     "@types/node": "18.15.0",
