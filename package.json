@@ -7,9 +7,9 @@
   ],
   "scripts": {
     "build:libs": "npx nx run build --project=@root/client",
-    "mobile": "yarn lerna run start --scope mobile",
-    "mobile:android": "yarn lerna run android --scope mobile",
-    "mobile:ios": "yarn lerna run ios --scope mobile",
+    "mobile": "yarn workspace mobile start",
+    "mobile:android": "yarn workspace mobile android",
+    "mobile:ios": "yarn workspace mobile ios",
     "web": "yarn lerna run dev --scope web",
     "web:build": "yarn lerna run build --scope web",
     "web:preview": "yarn lerna run preview --scope web"
