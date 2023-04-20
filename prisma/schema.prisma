@@ -9,3 +9,52 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+model Users {
+  id          String   @id @default(uuid()) @db.Uuid
+  email       String   @unique
+  username    String   @unique
+  name        String?
+  avatarUrl   String?
+  description String?
+  location    String?
+  tweets      Tweets[]
+  likes       Likes[]
+  // Relations
+  followers Users[] @relation("Followers")
+  following Users[] @relation("Followers")
+  // Timestamps
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@index([email])
+  @@index([username])
+  @@map("users")
+}
+
+model Tweets {
+  id      String  @id @default(uuid()) @db.Uuid
+  content String  @db.VarChar(140)
+  userId  String  @db.Uuid
+  likes   Likes[]
+  // Relations
+  user     Users    @relation(fields: [userId], references: [id])
+  retweets Tweets[] @relation("Tweets")
+  replies  Tweets[] @relation("Tweets")
+  // Timestamps
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@map("tweets")
+}
+
+model Likes {
+  id      String @id @default(uuid()) @db.Uuid
+  tweetId String @db.Uuid
+  userId  String @db.Uuid
+  // Relations
+  tweet Tweets @relation(fields: [tweetId], references: [id])
+  user  Users  @relation(fields: [userId], references: [id])
+  // Timestamps
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@map("likes")
+}
