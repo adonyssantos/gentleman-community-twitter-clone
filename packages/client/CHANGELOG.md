@@ -1,5 +1,11 @@
 # @root/client
 
+## 0.0.2
+
+### Patch Changes
+
+- b90589c: Update Universal React Tailwind package.
+
 ## 0.0.1
 
 ### Patch Changes

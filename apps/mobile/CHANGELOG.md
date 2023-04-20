@@ -1,5 +1,12 @@
 # mobile
 
+## 0.0.2
+
+### Patch Changes
+
+- Updated dependencies [b90589c]
+  - @root/client@0.0.2
+
 ## 0.0.1
 
 ### Patch Changes
