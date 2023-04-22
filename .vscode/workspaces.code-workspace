@@ -42,7 +42,8 @@
       "**/node_modules/*/**": true,
       "**/.hg/store/**": true,
       "**/dist/**": true
-    }
+    },
+    "typescript.tsdk": "✨ root/node_modules/typescript/lib"
   },
   "extensions": {
     "recommendations": [

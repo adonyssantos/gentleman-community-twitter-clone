@@ -7,7 +7,7 @@
     "build:libs": "vite build"
   },
   "dependencies": {
-    "@universal-labs/primitives": "^1.9.3"
+    "@universal-labs/primitives": "^1.11.0"
   },
   "devDependencies": {
     "@types/node": "18.15.0",
