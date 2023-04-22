@@ -1,5 +1,13 @@
 # web
 
+## 0.0.3
+
+### Patch Changes
+
+- fe1b44e: Fix an error with Universal React Tailwind, TypeScript version and mobile scripts
+- Updated dependencies [fe1b44e]
+  - @root/client@0.0.3
+
 ## 0.0.2
 
 ### Patch Changes
