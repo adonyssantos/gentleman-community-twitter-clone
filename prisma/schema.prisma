@@ -10,7 +10,7 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Users {
+model User {
   id          String   @id @default(uuid()) @db.Uuid
   email       String   @unique
   username    String   @unique
@@ -18,11 +18,11 @@ model Users {
   avatarUrl   String?
   description String?
   location    String?
-  tweets      Tweets[]
-  likes       Likes[]
+  tweets      Tweet[]
+  likes       Like[]
   // Relations
-  followers Users[] @relation("Followers")
-  following Users[] @relation("Followers")
+  followers User[] @relation("Followers")
+  following User[] @relation("Followers")
   // Timestamps
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
@@ -31,28 +31,28 @@ model Users {
   @@map("users")
 }
 
-model Tweets {
+model Tweet{
   id      String  @id @default(uuid()) @db.Uuid
   content String  @db.VarChar(140)
   userId  String  @db.Uuid
-  likes   Likes[]
+  likes   Like[]
   // Relations
-  user     Users    @relation(fields: [userId], references: [id])
-  retweets Tweets[] @relation("Tweets")
-  replies  Tweets[] @relation("Tweets")
+  user     User    @relation(fields: [userId], references: [id])
+  retweets Tweet[] @relation("Tweets")
+  replies  Tweet[] @relation("Tweets")
   // Timestamps
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
   @@map("tweets")
 }
 
-model Likes {
+model Like {
   id      String @id @default(uuid()) @db.Uuid
   tweetId String @db.Uuid
   userId  String @db.Uuid
   // Relations
-  tweet Tweets @relation(fields: [tweetId], references: [id])
-  user  Users  @relation(fields: [userId], references: [id])
+  tweet Tweet @relation(fields: [tweetId], references: [id])
+  user  User  @relation(fields: [userId], references: [id])
   // Timestamps
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
