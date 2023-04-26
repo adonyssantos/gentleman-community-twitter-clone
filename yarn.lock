@@ -3497,6 +3497,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@root/client@workspace:packages/client"
   dependencies:
+    "@tanstack/react-query": ^4.29.5
+    "@trpc/client": ^10.21.1
+    "@trpc/react-query": ^10.21.1
     "@types/node": 18.15.0
     "@types/react": 18.0.28
     "@types/react-dom": 18.0.11
@@ -3704,18 +3707,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tanstack/query-core@npm:4.29.1":
-  version: 4.29.1
-  resolution: "@tanstack/query-core@npm:4.29.1"
-  checksum: e7a5a73e5e743411e39348bee3ded4b6c5dd3a70009e72e067e257d5f3d612bfe8df0998cddff6ad7a078e0bcf7a3c92ded669758ca697055472ce910e23a368
+"@tanstack/query-core@npm:4.29.5":
+  version: 4.29.5
+  resolution: "@tanstack/query-core@npm:4.29.5"
+  checksum: 367176beccd78e959c74e69e96497b626dd1c139398501eb7a04cf92215edf262665c3e7bb59df68320779d49893d3153a3b41e750b9046655b45cfe44691b36
   languageName: node
   linkType: hard
 
-"@tanstack/react-query@npm:^4.29.3":
-  version: 4.29.3
-  resolution: "@tanstack/react-query@npm:4.29.3"
+"@tanstack/react-query@npm:^4.29.5":
+  version: 4.29.5
+  resolution: "@tanstack/react-query@npm:4.29.5"
   dependencies:
-    "@tanstack/query-core": 4.29.1
+    "@tanstack/query-core": 4.29.5
     use-sync-external-store: ^1.2.0
   peerDependencies:
     react: ^16.8.0 || ^17.0.0 || ^18.0.0
@@ -3726,7 +3729,7 @@ __metadata:
       optional: true
     react-native:
       optional: true
-  checksum: 7d33fe001ba6ec2332c28749312e5268e6bc060ea0e7c3faa37a28a12fd4b4fddd3803fdfb4e6551997f06d4cd32568e39d9cc9a26c19f40cfef276fad1eaaee
+  checksum: de45573900810b37216aa8d6599cae5ea43602eaada9fd2224f57ff7ab1de10b3f2e681e7fdb993ee1519ed8ffc7e6e07d6bf3ad1b9da4136b1ae78ca19f31f6
   languageName: node
   linkType: hard
 
@@ -16170,11 +16173,6 @@ __metadata:
   dependencies:
     "@root/client": "workspace:*"
     "@root/server": "workspace:*"
-    "@tanstack/react-query": ^4.29.3
-    "@trpc/client": ^10.21.1
-    "@trpc/next": ^10.21.1
-    "@trpc/react-query": ^10.21.1
-    "@trpc/server": ^10.21.1
     "@types/node": 18.15.0
     "@types/react": 18.0.28
     "@types/react-dom": 18.0.11
@@ -16191,7 +16189,6 @@ __metadata:
     react-query: 3
     tailwindcss: 3.2.7
     typescript: 4.9.5
-    zod: ^3.21.4
   languageName: unknown
   linkType: soft
 
