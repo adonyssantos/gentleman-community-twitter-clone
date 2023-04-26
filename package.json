@@ -10,6 +10,7 @@
     "mobile": "yarn workspace mobile start",
     "mobile:android": "yarn workspace mobile android",
     "mobile:ios": "yarn workspace mobile ios",
+    "version": "changesets version",
     "web": "yarn lerna run dev --scope web",
     "web:build": "yarn lerna run build --scope web",
     "web:preview": "yarn lerna run preview --scope web"
