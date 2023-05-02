@@ -9,7 +9,10 @@ export default function Home() {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <main>Hello from Next Web App!</main>
+      <main>
+        Hello from Next Web App! <br/>
+        Vercel deploy preview test.
+      </main>
     </>
   );
 }
