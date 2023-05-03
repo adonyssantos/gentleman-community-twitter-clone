@@ -10,6 +10,7 @@
     "mobile": "yarn workspace mobile start",
     "mobile:android": "yarn workspace mobile android",
     "mobile:ios": "yarn workspace mobile ios",
+    "release": "changeset version && yarn diff --yes && yarn prettier --write '{packages,plugins}/*/{package.json,CHANGELOG.md}' && yarn install",
     "version": "changesets version",
     "web": "yarn lerna run dev --scope web",
     "web:build": "yarn lerna run build --scope web",
