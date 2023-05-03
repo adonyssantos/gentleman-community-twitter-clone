@@ -1,5 +1,11 @@
 # web
 
+## 0.0.4
+
+### Patch Changes
+
+- 1da9f3c: Just a test.
+
 ## 0.0.3
 
 ### Patch Changes
