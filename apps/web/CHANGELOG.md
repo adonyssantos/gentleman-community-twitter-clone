@@ -1,5 +1,11 @@
 # web
 
+## 0.0.5
+
+### Patch Changes
+
+- ced3418: Just a test bump
+
 ## 0.0.4
 
 ### Patch Changes
