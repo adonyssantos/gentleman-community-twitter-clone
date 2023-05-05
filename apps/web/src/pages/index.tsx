@@ -1,6 +1,8 @@
+import { trpc } from '@root/client/src/trpc';
 import Head from 'next/head';
 
 export default function Home() {
+  const { data } = trpc.hello.useQuery();
   return (
     <>
       <Head>
@@ -10,6 +12,7 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <main>Hello from Next Web App!!</main>
+      <p>{data}</p>
     </>
   );
 }
