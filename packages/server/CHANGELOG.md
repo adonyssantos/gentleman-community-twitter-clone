@@ -1,5 +1,11 @@
 # @root/server
 
+## 0.0.2
+
+### Patch Changes
+
+- 1fa0f50: feat: trpc setup
+
 ## 0.0.1
 
 ### Patch Changes

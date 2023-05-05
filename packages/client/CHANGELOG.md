@@ -1,5 +1,11 @@
 # @root/client
 
+## 0.0.4
+
+### Patch Changes
+
+- 1fa0f50: feat: trpc setup
+
 ## 0.0.3
 
 ### Patch Changes
