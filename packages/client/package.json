@@ -9,7 +9,9 @@
   "dependencies": {
     "@tanstack/react-query": "^4.29.5",
     "@trpc/client": "^10.21.1",
-    "@trpc/react-query": "^10.21.1"
+    "@trpc/react-query": "^10.21.1",
+    "@universal-labs/primitives": "^1.11.0",
+    "@universal-labs/styled": "^2.0.3"
   },
   "devDependencies": {
     "@types/node": "18.15.0",
