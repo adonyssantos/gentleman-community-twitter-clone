@@ -28,6 +28,7 @@ jobs:
         with:
           version: yarn version
           commit: "chore(publish): Bump packages"
+          title: "chore(publish): Bump packages"
           createGithubReleases: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
