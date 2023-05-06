@@ -1,5 +1,12 @@
 # mobile
 
+## 0.0.4
+
+### Patch Changes
+
+- Updated dependencies [1fa0f50]
+  - @root/client@0.0.4
+
 ## 0.0.3
 
 ### Patch Changes

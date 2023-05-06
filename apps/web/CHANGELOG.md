@@ -1,5 +1,14 @@
 # web
 
+## 0.0.6
+
+### Patch Changes
+
+- 1fa0f50: feat: trpc setup
+- Updated dependencies [1fa0f50]
+  - @root/client@0.0.4
+  - @root/server@0.0.2
+
 ## 0.0.5
 
 ### Patch Changes
