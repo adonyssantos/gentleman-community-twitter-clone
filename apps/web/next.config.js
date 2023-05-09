@@ -8,14 +8,20 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   // TODO: Update @root/client to be a package
-  transpilePackages: ['react-native', 'react-native-web', '@root/client', '@root/server', '@universal-labs/primitives', '@universal-labs/styled'],
+  transpilePackages: [
+    'react-native',
+    'react-native-web',
+    '@root/client',
+    '@root/server',
+    '@universal-labs/primitives',
+    '@universal-labs/styled',
+  ],
   /**
    * Transformation to apply for both preview and dev server
    * @param config {import('webpack').Configuration}
    * @param options
    * @returns {import('webpack').Configuration}
-   */
-  webpack(config) {
+   */ webpack(config) {
     // Mix in aliases
     if (!config.resolve) {
       config.resolve = {};
