@@ -16,7 +16,9 @@
   },
   "dependencies": {
     "@changesets/cli": "^2.26.1",
-    "@prisma/client": "^4.11.0"
+    "@prisma/client": "^4.11.0",
+    "@supabase/supabase-js": "^2.21.0",
+    "@universal-labs/styled": "^3.0.4"
   },
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "^4.1.1",
