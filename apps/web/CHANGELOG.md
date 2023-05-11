@@ -1,5 +1,11 @@
 # web
 
+## 0.0.7
+
+### Patch Changes
+
+- f48e080: fix: Update content
+
 ## 0.0.6
 
 ### Patch Changes
