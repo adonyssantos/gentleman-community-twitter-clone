@@ -1,5 +1,11 @@
 # web
 
+## 0.0.8
+
+### Patch Changes
+
+- a533a54: fix(web): Update content
+
 ## 0.0.7
 
 ### Patch Changes
