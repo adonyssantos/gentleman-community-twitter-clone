@@ -6,9 +6,14 @@
     "packages/*"
   ],
   "scripts": {
+    "client:test": "yarn workspace client test",
+    "format": "yarn lerna run format",
+    "lint": "yarn lerna run lint",
+    "lint:fix": "yarn lerna run lint:fix",
     "mobile": "yarn workspace mobile start",
     "mobile:android": "yarn workspace mobile android",
     "mobile:ios": "yarn workspace mobile ios",
+    "server:test": "yarn workspace server test",
     "web": "yarn lerna run dev --scope web",
     "web:build": "yarn lerna run build --scope web",
     "web:preview": "yarn lerna run preview --scope web"
