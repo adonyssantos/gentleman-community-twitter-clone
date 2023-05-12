@@ -15,11 +15,21 @@ on:
 
 env:
   DATABASE_URL: ${{ secrets.DATABASE_URL }}
+  NEXT_PUBLIC_VERCEL_URL: ${{ secrets.NEXT_PUBLIC_VERCEL_URL }}
+  LOCAL_URL: ${{ secrets.LOCAL_URL }}
 
 jobs:
+  avoid_redundancy:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Cancel Previous Redundant Builds
+        uses: styfle/cancel-workflow-action@0.11.0
+        with:
+          access_token: ${{ github.token }}
+
   prepare:
     name: Prepare
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -37,7 +47,7 @@ jobs:
 
   web-app:
     name: Web App
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     needs: prepare
     steps:
       - name: Build
@@ -45,7 +55,7 @@ jobs:
 
   client-package:
     name: Client Package
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     needs: prepare
     steps:
       - name: Test
@@ -53,7 +63,7 @@ jobs:
 
   server-package:
     name: Server Package
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     needs: prepare
     steps:
       - name: Test
@@ -61,7 +71,7 @@ jobs:
 
   tools:
     name: Tools
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     needs: prepare
     steps:
       - name: Lint
