@@ -1,28 +1,28 @@
 {
   "name": "@root/client",
-  "version": "0.0.4",
+  "version": "0.0.0",
   "private": true,
   "main": "src/index.ts",
   "scripts": {
     "build:libs": "vite build"
   },
   "dependencies": {
-    "@tanstack/react-query": "^4.29.5",
-    "@trpc/client": "^10.21.1",
-    "@trpc/react-query": "^10.21.1",
-    "@universal-labs/primitives": "^1.11.0",
-    "@universal-labs/styled": "^2.0.3"
+    "@tanstack/react-query": "4.29.5",
+    "@trpc/client": "10.21.1",
+    "@trpc/react-query": "10.21.1",
+    "@universal-labs/primitives": "1.11.0",
+    "@universal-labs/styled": "2.0.3",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-native": "0.71.3"
   },
   "devDependencies": {
     "@types/node": "18.15.0",
     "@types/react": "18.0.28",
     "@types/react-dom": "18.0.11",
-    "@types/react-native": "^0.71.3",
-    "@vitejs/plugin-react-swc": "^3.2.0",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "react-native": "0.71.3",
-    "vite": "^4.1.0"
+    "@types/react-native": "0.71.3",
+    "@vitejs/plugin-react-swc": "3.2.0",
+    "vite": "4.1.0"
   },
   "packageManager": "yarn@3.4.1"
 }

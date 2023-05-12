@@ -1,6 +1,6 @@
 {
   "name": "mobile",
-  "version": "0.0.4",
+  "version": "0.0.0",
   "private": true,
   "main": "index.js",
   "scripts": {
@@ -10,12 +10,12 @@
   },
   "dependencies": {
     "@root/client": "workspace:*",
-    "expo": "~48.0.6",
-    "expo-status-bar": "~1.4.4",
+    "expo": "48.0.6",
+    "expo-status-bar": "1.4.4",
     "react": "18.2.0",
     "react-native": "0.71.3"
   },
   "devDependencies": {
-    "@babel/core": "^7.20.0"
+    "@babel/core": "7.20.2"
   }
 }

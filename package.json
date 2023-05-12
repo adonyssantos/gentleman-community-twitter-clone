@@ -6,7 +6,6 @@
     "packages/*"
   ],
   "scripts": {
-    "build:libs": "npx nx run build --project=@root/client",
     "mobile": "yarn workspace mobile start",
     "mobile:android": "yarn workspace mobile android",
     "mobile:ios": "yarn workspace mobile ios",
@@ -14,30 +13,27 @@
     "web:build": "yarn lerna run build --scope web",
     "web:preview": "yarn lerna run preview --scope web"
   },
-  "dependencies": {
-    "@prisma/client": "^4.11.0"
-  },
   "devDependencies": {
-    "@trivago/prettier-plugin-sort-imports": "^4.1.1",
+    "@trivago/prettier-plugin-sort-imports": "4.1.1",
     "@types/node": "16.11.7",
-    "@typescript-eslint/eslint-plugin": "^5.36.1",
-    "@typescript-eslint/parser": "^5.36.1",
-    "@vitejs/plugin-react": "^3.1.0",
-    "eslint": "~8.36.0",
+    "@typescript-eslint/eslint-plugin": "5.36.1",
+    "@typescript-eslint/parser": "5.36.1",
+    "@vitejs/plugin-react": "3.1.0",
+    "eslint": "8.36.0",
     "eslint-config-prettier": "8.1.0",
     "eslint-plugin-import": "2.26.0",
     "eslint-plugin-jsx-a11y": "6.6.1",
-    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-prettier": "4.0.0",
     "eslint-plugin-react": "7.31.11",
     "eslint-plugin-react-hooks": "4.6.0",
     "eslint-plugin-unused-imports": "1.1.5",
     "lerna": "6.5.1",
-    "prettier": "^2.8.3",
-    "prettier-plugin-tailwindcss": "^0.2.4",
-    "prisma": "^4.11.0",
-    "tslib": "^2.3.0",
-    "typescript": "^4.9.5",
-    "vite": "^4.1.0"
+    "prettier": "2.8.3",
+    "prettier-plugin-tailwindcss": "0.2.4",
+    "prisma": "4.11.0",
+    "tslib": "2.3.0",
+    "typescript": "4.9.5",
+    "vite": "4.1.0"
   },
   "packageManager": "yarn@3.4.1"
 }
