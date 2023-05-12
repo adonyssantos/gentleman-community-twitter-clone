@@ -1,0 +1,81 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`@universal-labs/primitives > H1 render 1`] = `
+<div
+  className="css-view-175oi2r"
+  dir={null}
+>
+  <h1
+    aria-level={1}
+    className="css-text-1rynq56"
+    dir="auto"
+    role="heading"
+  >
+    Hello Gentleman Community!!
+  </h1>
+</div>
+`;
+
+exports[`@universal-labs/primitives > Should  1`] = `
+<div
+  className="css-view-175oi2r"
+  dir={null}
+>
+  <h1
+    aria-level={1}
+    className="css-text-1rynq56"
+    dir="auto"
+    role="heading"
+  >
+    Hello Gentleman Community!!
+  </h1>
+</div>
+`;
+
+exports[`@universal-labs/primitives > Should render  1`] = `
+<div
+  className="css-view-175oi2r"
+  dir={null}
+>
+  <h1
+    aria-level={1}
+    className="css-text-1rynq56"
+    dir="auto"
+    role="heading"
+  >
+    Hello Gentleman Community!!
+  </h1>
+</div>
+`;
+
+exports[`@universal-labs/primitives > Should render App 1`] = `
+<div
+  className="css-view-175oi2r"
+  dir={null}
+>
+  <h1
+    aria-level={1}
+    className="css-text-1rynq56"
+    dir="auto"
+    role="heading"
+  >
+    Hello Gentleman Community!!
+  </h1>
+</div>
+`;
+
+exports[`@universal-labs/primitives > Should render AppProvider 1`] = `
+<div
+  className="css-view-175oi2r"
+  dir={null}
+>
+  <h1
+    aria-level={1}
+    className="css-text-1rynq56"
+    dir="auto"
+    role="heading"
+  >
+    Hello Gentleman Community!!
+  </h1>
+</div>
+`;

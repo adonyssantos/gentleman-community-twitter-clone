@@ -6,10 +6,9 @@
     "target": "ESNext",
     "jsx": "react-jsx",
     "noEmit": true,
-    "importsNotUsedAsValues": "error",
     "noFallthroughCasesInSwitch": true,
     "skipLibCheck": true,
-    "moduleResolution": "node"
+    "moduleResolution": "node",
   },
   "exclude": ["node_modules", ".yarn", "**/build"]
 }
