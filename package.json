@@ -10,13 +10,11 @@
     "mobile": "yarn workspace mobile start",
     "mobile:android": "yarn workspace mobile android",
     "mobile:ios": "yarn workspace mobile ios",
-    "release": "changeset publish",
     "web": "yarn lerna run dev --scope web",
     "web:build": "yarn lerna run build --scope web",
     "web:preview": "yarn lerna run preview --scope web"
   },
   "dependencies": {
-    "@changesets/cli": "^2.26.1",
     "@prisma/client": "^4.11.0"
   },
   "devDependencies": {
