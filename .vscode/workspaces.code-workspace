@@ -19,6 +19,10 @@
     {
       "name": "📦 @root/server",
       "path": "../packages/server"
+    },
+    {
+      "name": "📦 @root/shared",
+      "path": "../packages/shared"
     }
   ],
   "settings": {
