@@ -1,16 +1,10 @@
 /// <reference types="vitest" />
 import react from '@vitejs/plugin-react-swc';
+import path from 'path';
 import { defineConfig } from 'vite';
 
 export default defineConfig({
   plugins: [react()],
-  test: {
-    globals: true,
-    environment: 'happy-dom',
-    deps: {
-      inline: ['react-native'],
-    },
-  },
   optimizeDeps: {
     esbuildOptions: {
       mainFields: ['module', 'main'],
@@ -21,6 +15,8 @@ export default defineConfig({
     extensions: ['.web.tsx', '.web.jsx', '.web.js', '.tsx', '.ts', '.js'],
     alias: {
       'react-native': 'react-native-web',
+      '@root/client': path.resolve(__dirname, '../client/src'),
+      '@root/ui': path.resolve(__dirname, '../ui/src'),
     },
   },
   build: {

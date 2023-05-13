@@ -7,6 +7,9 @@
   "scripts": {
     "test": "vitest"
   },
+  "resolutions": {
+    "@types/node": "18.15.0"
+  },
   "dependencies": {
     "@root/shared": "workspace:*",
     "@root/ui": "workspace:*",
@@ -29,9 +32,8 @@
     "@types/react-native": "0.71.3",
     "@types/react-test-renderer": "18.0.0",
     "@vitejs/plugin-react-swc": "^3.2.0",
-    "happy-dom": "^9.10.9",
+    "happy-dom": "9.10.9",
     "react-test-renderer": "18.2.0",
-    "vite": "4.1.0",
     "vitest": "0.31.0"
   },
   "packageManager": "yarn@3.4.1"
