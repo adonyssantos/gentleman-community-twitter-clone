@@ -3732,6 +3732,7 @@ __metadata:
   resolution: "@root/client@workspace:packages/client"
   dependencies:
     "@root/shared": "workspace:*"
+    "@root/ui": "workspace:*"
     "@tanstack/react-query": 4.29.5
     "@testing-library/jest-dom": 5.16.5
     "@testing-library/react": 14.0.0
@@ -3745,7 +3746,7 @@ __metadata:
     "@universal-labs/primitives": 1.11.0
     "@universal-labs/styled": 2.0.3
     "@vitejs/plugin-react-swc": ^3.2.0
-    class-variance-authority: ^0.6.0
+    class-variance-authority: 0.6.0
     happy-dom: ^9.10.9
     react: 18.2.0
     react-dom: 18.2.0
@@ -3784,6 +3785,19 @@ __metadata:
 "@root/types@workspace:packages/types":
   version: 0.0.0-use.local
   resolution: "@root/types@workspace:packages/types"
+  languageName: unknown
+  linkType: soft
+
+"@root/ui@workspace:*, @root/ui@workspace:packages/ui":
+  version: 0.0.0-use.local
+  resolution: "@root/ui@workspace:packages/ui"
+  dependencies:
+    "@types/react": 18.0.28
+    "@universal-labs/primitives": 1.11.0
+    "@universal-labs/styled": 2.0.3
+    class-variance-authority: 0.6.0
+    react: 18.2.0
+    react-native: 0.71.3
   languageName: unknown
   linkType: soft
 
@@ -6292,7 +6306,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"class-variance-authority@npm:^0.6.0":
+"class-variance-authority@npm:0.6.0":
   version: 0.6.0
   resolution: "class-variance-authority@npm:0.6.0"
   dependencies:
@@ -18178,7 +18192,6 @@ __metadata:
     "@types/node": 18.15.0
     "@types/react": 18.0.28
     "@types/react-dom": 18.0.11
-    "@universal-labs/primitives": 1.11.0
     autoprefixer: 10.4.14
     eslint: 8.36.0
     eslint-config-next: 13.1.4

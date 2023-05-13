@@ -1,5 +1,5 @@
 import { SafeAreaView, Text } from 'react-native';
-import { AppProvider } from '@root/client';
+import { AppProvider } from '@root/client/providers/AppProvider';
 
 export default function App() {
   return (

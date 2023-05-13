@@ -1,5 +1,5 @@
 import type { AppRouter } from '@root/server/src/routes/appTRPC.route';
-import { LOCAL_URL, VERCEL_URL } from '@root/shared';
+import { LOCAL_URL, VERCEL_URL } from '@root/shared/constants';
 import { httpBatchLink } from '@trpc/client';
 import { createTRPCNext } from '@trpc/next';
 

@@ -1,4 +1,4 @@
-import { AppProvider } from '@root/client';
+import { AppProvider } from '@root/client/providers/AppProvider';
 import { trpc } from '@root/client/src/trpc';
 import type { AppProps } from 'next/app';
 import '../styles/globals.css';

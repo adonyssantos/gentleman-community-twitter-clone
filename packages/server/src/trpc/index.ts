@@ -1,11 +1,7 @@
-import { initTRPC, TRPCError } from '@trpc/server';
-import type { Session } from 'next-auth';
+import { initTRPC } from '@trpc/server';
+import type { Context } from './context';
 
-type CreateContextOptions = {
-  session: Session | null;
-};
-
-const t = initTRPC.context<CreateContextOptions>().create();
+const t = initTRPC.context<Context>().create();
 
 export const router = t.router;
 export const publicProcedure = t.procedure;
@@ -15,14 +11,8 @@ export const publicProcedure = t.procedure;
  * in before running a procedure
  */
 const enforceUserIsAuthenticated = t.middleware(({ ctx, next }) => {
-  if (!ctx.session || !ctx.session.user) {
-    throw new TRPCError({ code: 'UNAUTHORIZED' });
-  }
   return next({
-    ctx: {
-      // infers the `session` as non-nullable
-      session: { ...ctx.session, user: ctx.session.user },
-    },
+    ctx,
   });
 });
 

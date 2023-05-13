@@ -2,6 +2,7 @@
   "name": "@root/shared",
   "version": "0.0.0",
   "private": true,
+  "sideEffects": false,
   "main": "src/index.ts",
   "packageManager": "yarn@3.4.1"
 }
