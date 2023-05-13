@@ -1,8 +1,6 @@
 name: Continuous Integration
 
 on:
-  push:
-    branches: [main]
   pull_request:
     branches: [main]
     types: [opened, synchronize]
@@ -41,11 +39,21 @@ jobs:
       - name: Install Dependencies
         run: yarn --immutable
 
+      - uses: actions/upload-artifact@v3
+        with:
+          name: prepare
+          path: .
+
   code-quality:
     name: Code Quality
     runs-on: ubuntu-22.04
     needs: [prepare]
     steps:
+      - uses: actions/download-artifact@v2
+        with:
+          name: prepare
+          path: .
+
       - name: Lint
         run: yarn lint
 
@@ -54,6 +62,11 @@ jobs:
     runs-on: ubuntu-22.04
     needs: [code-quality]
     steps:
+      - uses: actions/download-artifact@v2
+        with:
+          name: prepare
+          path: .
+
       - name: Test
         run: yarn client:test
 
@@ -62,6 +75,11 @@ jobs:
     runs-on: ubuntu-22.04
     needs: [code-quality]
     steps:
+      - uses: actions/download-artifact@v2
+        with:
+          name: prepare
+          path: .
+
       - name: Test
         run: yarn server:test
 
@@ -70,5 +88,10 @@ jobs:
     runs-on: ubuntu-22.04
     needs: [client-package, server-package]
     steps:
+      - uses: actions/download-artifact@v2
+        with:
+          name: prepare
+          path: .
+
       - name: Build
         run: yarn web:build
