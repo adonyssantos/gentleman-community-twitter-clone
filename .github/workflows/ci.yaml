@@ -4,7 +4,7 @@ on:
   pull_request:
     branches: [main]
     types: [opened, synchronize]
-    paths: ['apps/web/**', 'packages/**']
+    paths: ["apps/web/**", "packages/**"]
 
 env:
   DATABASE_URL: ${{ secrets.DATABASE_URL }}
@@ -21,38 +21,12 @@ jobs:
         with:
           access_token: ${{ github.token }}
 
-  prepare:
-    name: Prepare
-    runs-on: ubuntu-22.04
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
-          cache: yarn
-
-      - name: Install Dependencies
-        run: yarn --immutable
-
-      - uses: actions/upload-artifact@v3
-        with:
-          name: prepare
-          path: .
-
   code-quality:
     name: Code Quality
     runs-on: ubuntu-22.04
-    needs: [prepare]
     steps:
-      - uses: actions/download-artifact@v2
-        with:
-          name: prepare
-          path: .
+      - name: Prepare
+        uses: ./.github/workflow-templates/prepare.yaml
 
       - name: Lint
         run: yarn lint
@@ -62,10 +36,8 @@ jobs:
     runs-on: ubuntu-22.04
     needs: [code-quality]
     steps:
-      - uses: actions/download-artifact@v2
-        with:
-          name: prepare
-          path: .
+      - name: Prepare
+        uses: ./.github/workflow-templates/prepare.yaml
 
       - name: Test
         run: yarn client:test
@@ -75,10 +47,8 @@ jobs:
     runs-on: ubuntu-22.04
     needs: [code-quality]
     steps:
-      - uses: actions/download-artifact@v2
-        with:
-          name: prepare
-          path: .
+      - name: Prepare
+        uses: ./.github/workflow-templates/prepare.yaml
 
       - name: Test
         run: yarn server:test
@@ -88,10 +58,8 @@ jobs:
     runs-on: ubuntu-22.04
     needs: [client-package, server-package]
     steps:
-      - uses: actions/download-artifact@v2
-        with:
-          name: prepare
-          path: .
+      - name: Prepare
+        uses: ./.github/workflow-templates/prepare.yaml
 
       - name: Build
         run: yarn web:build
