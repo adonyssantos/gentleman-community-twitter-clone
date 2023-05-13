@@ -25,8 +25,19 @@ jobs:
     name: Code Quality
     runs-on: ubuntu-22.04
     steps:
-      - name: Prepare
-        uses: ./.github/workflow-templates/prepare.yaml
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: yarn
+
+      - name: Install Dependencies
+        run: yarn --immutable
 
       - name: Lint
         run: yarn lint
@@ -36,8 +47,19 @@ jobs:
     runs-on: ubuntu-22.04
     needs: [code-quality]
     steps:
-      - name: Prepare
-        uses: ./.github/workflow-templates/prepare.yaml
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: yarn
+
+      - name: Install Dependencies
+        run: yarn --immutable
 
       - name: Test
         run: yarn client:test
@@ -47,8 +69,19 @@ jobs:
     runs-on: ubuntu-22.04
     needs: [code-quality]
     steps:
-      - name: Prepare
-        uses: ./.github/workflow-templates/prepare.yaml
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: yarn
+
+      - name: Install Dependencies
+        run: yarn --immutable
 
       - name: Test
         run: yarn server:test
@@ -58,8 +91,19 @@ jobs:
     runs-on: ubuntu-22.04
     needs: [client-package, server-package]
     steps:
-      - name: Prepare
-        uses: ./.github/workflow-templates/prepare.yaml
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: yarn
+
+      - name: Install Dependencies
+        run: yarn --immutable
 
       - name: Build
         run: yarn web:build
