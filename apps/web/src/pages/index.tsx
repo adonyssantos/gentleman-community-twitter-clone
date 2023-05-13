@@ -1,4 +1,4 @@
-import { trpc } from '@root/client/src/trpc';
+import { trpc } from '@root/client';
 import Head from 'next/head';
 
 export default function Home() {

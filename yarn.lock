@@ -3731,6 +3731,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@root/client@workspace:packages/client"
   dependencies:
+    "@root/shared": "workspace:*"
     "@tanstack/react-query": 4.29.5
     "@testing-library/jest-dom": 5.16.5
     "@testing-library/react": 14.0.0
@@ -3744,6 +3745,7 @@ __metadata:
     "@universal-labs/primitives": 1.11.0
     "@universal-labs/styled": 2.0.3
     "@vitejs/plugin-react-swc": ^3.2.0
+    class-variance-authority: ^0.6.0
     happy-dom: ^9.10.9
     react: 18.2.0
     react-dom: 18.2.0
@@ -3770,6 +3772,12 @@ __metadata:
     ts-jest: 29.1.0
     ts-node: 10.9.1
     zod: 3.21.4
+  languageName: unknown
+  linkType: soft
+
+"@root/shared@workspace:*, @root/shared@workspace:packages/shared":
+  version: 0.0.0-use.local
+  resolution: "@root/shared@workspace:packages/shared"
   languageName: unknown
   linkType: soft
 
@@ -3988,8 +3996,8 @@ __metadata:
   linkType: hard
 
 "@testing-library/dom@npm:^9.0.0":
-  version: 9.2.0
-  resolution: "@testing-library/dom@npm:9.2.0"
+  version: 9.3.0
+  resolution: "@testing-library/dom@npm:9.3.0"
   dependencies:
     "@babel/code-frame": ^7.10.4
     "@babel/runtime": ^7.12.5
@@ -3999,7 +4007,7 @@ __metadata:
     dom-accessibility-api: ^0.5.9
     lz-string: ^1.5.0
     pretty-format: ^27.0.2
-  checksum: b145f43cd06ff083012cf2503aff6ccba97ff80715fcb106fe64af690f5536557bf24d37b97e8d685bbe3803d7f71d685ce71426cb1b9e250c3611e4372dcfa9
+  checksum: 790f4da6a8cbe7da8b7769e81e68caea1aed5b5f1973b808895692a945fb854fe8acdc66ffc34b6a57ec49bad9d76ccdd69b632ea8a82ad61d1e97d76cfdf9ec
   languageName: node
   linkType: hard
 
@@ -4129,9 +4137,9 @@ __metadata:
   linkType: hard
 
 "@tsconfig/node16@npm:^1.0.2":
-  version: 1.0.3
-  resolution: "@tsconfig/node16@npm:1.0.3"
-  checksum: 3a8b657dd047495b7ad23437d6afd20297ce90380ff0bdee93fc7d39a900dbd8d9e26e53ff6b465e7967ce2adf0b218782590ce9013285121e6a5928fbd6819f
+  version: 1.0.4
+  resolution: "@tsconfig/node16@npm:1.0.4"
+  checksum: 202319785901f942a6e1e476b872d421baec20cf09f4b266a1854060efbf78cde16a4d256e8bc949d31e6cd9a90f1e8ef8fb06af96a65e98338a2b6b0de0a0ff
   languageName: node
   linkType: hard
 
@@ -6278,6 +6286,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"class-variance-authority@npm:^0.6.0":
+  version: 0.6.0
+  resolution: "class-variance-authority@npm:0.6.0"
+  dependencies:
+    clsx: 1.2.1
+  peerDependencies:
+    typescript: ">= 4.5.5 < 6"
+  peerDependenciesMeta:
+    typescript:
+      optional: true
+  checksum: c86fe9d208b33afbd82e3349739f8be9bfceb17e78f2ee689039029de016c5547883b41ac8ab69630f433cf4d4c9159a3c82072e9d8b7225f63cd31c01d6c9b8
+  languageName: node
+  linkType: hard
+
 "clean-stack@npm:^2.0.0":
   version: 2.2.0
   resolution: "clean-stack@npm:2.2.0"
@@ -6386,6 +6408,13 @@ __metadata:
   version: 2.1.2
   resolution: "clone@npm:2.1.2"
   checksum: aaf106e9bc025b21333e2f4c12da539b568db4925c0501a1bf4070836c9e848c892fa22c35548ce0d1132b08bbbfa17a00144fe58fccdab6fa900fec4250f67d
+  languageName: node
+  linkType: hard
+
+"clsx@npm:1.2.1":
+  version: 1.2.1
+  resolution: "clsx@npm:1.2.1"
+  checksum: 30befca8019b2eb7dbad38cff6266cf543091dae2825c856a62a8ccf2c3ab9c2907c4d12b288b73101196767f66812365400a227581484a05f968b0307cfaf12
   languageName: node
   linkType: hard
 
@@ -9596,8 +9625,8 @@ __metadata:
   linkType: hard
 
 "happy-dom@npm:^9.10.9":
-  version: 9.16.0
-  resolution: "happy-dom@npm:9.16.0"
+  version: 9.17.0
+  resolution: "happy-dom@npm:9.17.0"
   dependencies:
     css.escape: ^1.5.1
     entities: ^4.5.0
@@ -9605,7 +9634,7 @@ __metadata:
     webidl-conversions: ^7.0.0
     whatwg-encoding: ^2.0.0
     whatwg-mimetype: ^3.0.0
-  checksum: 2a35f7dda443bd5854de0cce1f9237e7ac15955d9b4e058bca6c5fa7b3b0faef20f95830ddc93b765df541874ad31fe4e90f0c5b51f560e99b47a86dca2ff921
+  checksum: 2402bbaafbe05406ec2e9740a8faceeead5bb87f363f80f60a3440a655427b4d9a773888f482e96d342f16fb146e8d87900d72f65298945b8331b7336a57bf58
   languageName: node
   linkType: hard
 
