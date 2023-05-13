@@ -15,13 +15,14 @@
     "mobile:android": "yarn workspace mobile android",
     "mobile:ios": "yarn workspace mobile ios",
     "server:test": "yarn workspace @root/server test",
+    "test": "npx nx run-many --target=test --all --parallel",
     "web": "yarn lerna run dev --scope web",
     "web:build": "yarn lerna run build --scope web",
     "web:preview": "yarn lerna run preview --scope web"
   },
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "4.1.1",
-    "@types/node": "16.11.7",
+    "@types/node": "18.15.0",
     "@typescript-eslint/eslint-plugin": "5.36.1",
     "@typescript-eslint/parser": "5.36.1",
     "@vitejs/plugin-react": "3.1.0",
@@ -39,7 +40,8 @@
     "prisma": "4.11.0",
     "tslib": "2.3.0",
     "typescript": "4.9.5",
-    "vite": "4.1.0"
+    "vite": "4.1.0",
+    "vitest": "0.31.0"
   },
   "packageManager": "yarn@3.4.1"
 }
