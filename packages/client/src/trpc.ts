@@ -1,7 +1,7 @@
 import type { AppRouter } from '@root/server/src/routes/appTRPC.route';
+import { LOCAL_URL, VERCEL_URL } from '@root/shared';
 import { httpBatchLink } from '@trpc/client';
 import { createTRPCNext } from '@trpc/next';
-import { LOCAL_URL, VERCEL_URL } from '@root/shared';
 
 export const trpc = createTRPCNext<AppRouter>({
   config() {
