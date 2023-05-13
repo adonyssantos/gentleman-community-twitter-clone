@@ -2,16 +2,11 @@ name: Continuous Integration
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
   pull_request:
-    branches:
-      - main
+    branches: [main]
     types: [opened, synchronize]
-    paths:
-      - 'apps/**'
-      - 'packages/**'
-      - '!apps/mobile/**'
+    paths: ['apps/web/**', 'packages/**']
 
 env:
   DATABASE_URL: ${{ secrets.DATABASE_URL }}
@@ -32,12 +27,12 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
       
       - name: Setup Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: 18
           cache: yarn
@@ -45,18 +40,20 @@ jobs:
       - name: Install Dependencies
         run: yarn --immutable
 
-  web-app:
-    name: Web App
+  code-quality:
+    name: Code Quality
     runs-on: ubuntu-22.04
-    needs: prepare
+    needs: [prepare]
     steps:
-      - name: Build
-        run: yarn web:build
+      - name: Lint
+        run: yarn lint
+      - name: Format
+        run: yarn format
 
   client-package:
     name: Client Package
     runs-on: ubuntu-22.04
-    needs: prepare
+    needs: [code-quality]
     steps:
       - name: Test
         run: yarn client:test
@@ -64,17 +61,15 @@ jobs:
   server-package:
     name: Server Package
     runs-on: ubuntu-22.04
-    needs: prepare
+    needs: [code-quality]
     steps:
       - name: Test
         run: yarn server:test
 
-  tools:
-    name: Tools
+  web-app:
+    name: Web App
     runs-on: ubuntu-22.04
-    needs: prepare
+    needs: [client-package, server-package]
     steps:
-      - name: Lint
-        run: yarn lint
-      - name: Format
-        run: yarn format
+      - name: Build
+        run: yarn web:build
