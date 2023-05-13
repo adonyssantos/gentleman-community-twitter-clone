@@ -39,8 +39,8 @@ jobs:
       - name: Install Dependencies
         run: yarn --immutable
 
-      - name: Lint
-        run: yarn lint
+      - name: Linter Check
+        run: yarn lint:check
 
   client-package:
     name: Client Package

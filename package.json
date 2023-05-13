@@ -7,8 +7,9 @@
   ],
   "scripts": {
     "client:test": "yarn workspace @root/client test",
-    "format": "prettier --write . --ignore-path .gitignore --ignore-path .prettierignore",
-    "lint": "eslint --ext .ts,.tsx,.js,.jsx --ignore-path .gitignore .",
+    "format:check": "prettier --check . --ignore-path .gitignore --ignore-path .prettierignore",
+    "format:fix": "prettier --write . --ignore-path .gitignore --ignore-path .prettierignore",
+    "lint:check": "eslint --ext .ts,.tsx,.js,.jsx --ignore-path .gitignore .",
     "lint:fix": "eslint --fix --ext .ts,.tsx,.js,.jsx --ignore-path .gitignore .",
     "mobile": "yarn workspace mobile start",
     "mobile:android": "yarn workspace mobile android",
