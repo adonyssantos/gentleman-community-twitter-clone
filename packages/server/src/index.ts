@@ -4,4 +4,3 @@ export * from './trpc';
 
 // Routes
 export * from './routes/appTRPC.route';
-export * from './routes/hello.route';
