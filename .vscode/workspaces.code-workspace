@@ -23,6 +23,10 @@
     {
       "name": "📦 @root/shared",
       "path": "../packages/shared"
+    },
+    {
+      "name": "📦 @root/types",
+      "path": "../packages/types"
     }
   ],
   "settings": {
