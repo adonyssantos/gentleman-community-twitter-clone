@@ -42,3 +42,15 @@ cp .env.example .env
 - `yarn mobile`
 - `yarn mobile:ios`
 - `yarn mobile:android`
+
+### Code Quality
+
+- `yarn format:check`
+- `yarn format:fix`
+- `yarn lint:check`
+- `yarn lint:fix`
+
+### Tests
+
+- `yarn client:test`
+- `yarn server:test`

@@ -1,1 +1,1 @@
-export interface ITweet {};
+export interface ITweet {}

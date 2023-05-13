@@ -1,1 +1,1 @@
-export interface ILike {};
+export interface ILike {}
