@@ -45,9 +45,10 @@ cp .env.example .env
 
 ### Code Quality
 
-- `yarn lint`
+- `yarn format:check`
+- `yarn format:fix`
+- `yarn lint:check`
 - `yarn lint:fix`
-- `yarn format`
 
 ### Tests
 
