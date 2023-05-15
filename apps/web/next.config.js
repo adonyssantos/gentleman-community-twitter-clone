@@ -7,7 +7,6 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
-  // TODO: Update @root/client to be a package
   transpilePackages: [
     '@root/client',
     '@root/server',
