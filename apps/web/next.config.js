@@ -9,12 +9,14 @@ const nextConfig = {
   },
   // TODO: Update @root/client to be a package
   transpilePackages: [
-    'react-native',
-    'react-native-web',
     '@root/client',
     '@root/server',
+    '@root/shared',
+    '@root/ui',
     '@universal-labs/primitives',
     '@universal-labs/styled',
+    'react-native-web',
+    'react-native',
   ],
   /**
    * Transformation to apply for both preview and dev server
