@@ -27,6 +27,10 @@
     {
       "name": "📦 @root/types",
       "path": "../packages/types"
+    },
+    {
+      "name": "📦 @root/ui",
+      "path": "../packages/ui"
     }
   ],
   "settings": {
@@ -75,7 +79,8 @@
       "dsznajder.es7-react-js-snippets",
       "dbaeumer.vscode-eslint",
       "nrwl.angular-console",
-      "esbenp.prettier-vscode"
+      "esbenp.prettier-vscode",
+      "eliostruyf.vscode-typescript-exportallmodules"
     ]
   }
 }

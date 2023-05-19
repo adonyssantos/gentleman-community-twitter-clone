@@ -1,6 +1,6 @@
 import { create, ReactTestRenderer, ReactTestRendererJSON } from 'react-test-renderer';
 import { describe, expect, it } from 'vitest';
-import { AppProvider } from '../src/providers/app.provider';
+import { AppProvider } from '../src/providers/AppProvider';
 
 function toJson(component: ReactTestRenderer) {
   const result = component.toJSON();

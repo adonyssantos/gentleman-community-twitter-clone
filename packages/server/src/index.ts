@@ -1,7 +1,8 @@
-// tRPC
-export * from './context';
-export * from './trpc';
+// // tRPC
+// export * from './context';
+// export * from './trpc';
 
-// Routes
-export * from './routes/appTRPC.route';
-export * from './routes/hello.route';
+// // Routes
+// export * from './routes/appTRPC.route';
+
+export {};

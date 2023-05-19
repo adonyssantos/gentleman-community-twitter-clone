@@ -14,25 +14,18 @@ exports[`@universal-labs/primitives > Should render AppProvider 1`] = `
     Hello Gentleman Community!!
   </h1>
   <div
-    className="css-view-175oi2r r-transitionProperty-1i6wzkk r-userSelect-lrvibr r-cursor-1loqt21 r-touchAction-1otgn73 r-backgroundColor-14sbq61 r-borderRadius-1jkafct"
+    className="css-view-175oi2r r-cursor-1loqt21 r-touchAction-1otgn73 button bg-blue-500 text-white border-transparent hover:bg-blue-600 text-base py-2 px-4"
     dir={null}
+    onBlur={[Function]}
     onClick={[Function]}
     onContextMenu={[Function]}
+    onFocus={[Function]}
     onKeyDown={[Function]}
-    role="button"
-    style={
-      {
-        "transitionDuration": "0s",
-      }
-    }
     tabIndex="0"
   >
-    <div
-      className="css-text-1rynq56 r-color-jwli3a r-fontWeight-majxgm r-padding-edyy15 r-textAlign-q4m81j r-textTransform-tsynxw"
-      dir="auto"
-    >
-      Hola
-    </div>
+    <p>
+      Boton
+    </p>
   </div>
 </div>
 `;

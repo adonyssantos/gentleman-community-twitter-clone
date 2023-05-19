@@ -9,6 +9,14 @@
     "noFallthroughCasesInSwitch": true,
     "skipLibCheck": true,
     "moduleResolution": "node",
+    "baseUrl": ".",
+    "rootDir": ".",
+    "paths": {
+      "@root/client/*": ["./packages/client/src/*"],
+      "@root/server/*": ["./packages/server/src/*"],
+      "@root/shared/*": ["./packages/shared/src/*"],
+      "@root/ui/*": ["./packages/ui/src/*"]
+    }
   },
   "exclude": ["node_modules", ".yarn", "**/build"]
 }

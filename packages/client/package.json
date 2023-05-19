@@ -2,18 +2,23 @@
   "name": "@root/client",
   "version": "0.0.0",
   "private": true,
+  "sideEffects": false,
   "main": "src/index.ts",
   "scripts": {
     "test": "vitest"
   },
+  "resolutions": {
+    "@types/node": "18.15.0"
+  },
   "dependencies": {
     "@root/shared": "workspace:*",
+    "@root/ui": "workspace:*",
     "@tanstack/react-query": "4.29.5",
     "@trpc/client": "10.21.1",
     "@trpc/react-query": "10.21.1",
     "@universal-labs/primitives": "1.11.0",
     "@universal-labs/styled": "2.0.3",
-    "class-variance-authority": "^0.6.0",
+    "class-variance-authority": "0.6.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-native": "0.71.3"
@@ -27,12 +32,8 @@
     "@types/react-native": "0.71.3",
     "@types/react-test-renderer": "18.0.0",
     "@vitejs/plugin-react-swc": "^3.2.0",
-    "happy-dom": "^9.10.9",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "react-native": "0.71.3",
+    "happy-dom": "9.10.9",
     "react-test-renderer": "18.2.0",
-    "vite": "4.1.0",
     "vitest": "0.31.0"
   },
   "packageManager": "yarn@3.4.1"
