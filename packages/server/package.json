@@ -9,6 +9,8 @@
   },
   "dependencies": {
     "@prisma/client": "4.11.0",
+    "@supabase/auth-helpers-nextjs": "0.6.1",
+    "@supabase/supabase-js": "2.22.0",
     "@trpc/next": "10.21.1",
     "@trpc/server": "10.21.1",
     "next": "13.1.4",
