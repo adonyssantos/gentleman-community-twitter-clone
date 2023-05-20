@@ -3754,8 +3754,8 @@ __metadata:
   resolution: "@root/server@workspace:packages/server"
   dependencies:
     "@prisma/client": 4.11.0
-    "@supabase/auth-helpers-nextjs": ^0.6.1
-    "@supabase/supabase-js": ^2.22.0
+    "@supabase/auth-helpers-nextjs": 0.6.1
+    "@supabase/supabase-js": 2.22.0
     "@trpc/next": 10.21.1
     "@trpc/server": 10.21.1
     "@types/jest": 29.5.1
@@ -3859,7 +3859,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@supabase/auth-helpers-nextjs@npm:^0.6.1":
+"@supabase/auth-helpers-nextjs@npm:0.6.1":
   version: 0.6.1
   resolution: "@supabase/auth-helpers-nextjs@npm:0.6.1"
   dependencies:
@@ -3928,7 +3928,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@supabase/supabase-js@npm:^2.22.0":
+"@supabase/supabase-js@npm:2.22.0":
   version: 2.22.0
   resolution: "@supabase/supabase-js@npm:2.22.0"
   dependencies:
