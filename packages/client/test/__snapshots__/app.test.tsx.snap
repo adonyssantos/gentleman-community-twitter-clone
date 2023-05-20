@@ -14,7 +14,7 @@ exports[`@universal-labs/primitives > Should render AppProvider 1`] = `
     Hello Gentleman Community!!
   </h1>
   <div
-    className="css-view-175oi2r r-cursor-1loqt21 r-touchAction-1otgn73 button bg-blue-500 text-white border-transparent hover:bg-blue-600 text-base py-2 px-4"
+    className="css-view-175oi2r r-cursor-1loqt21 r-touchAction-1otgn73 rounded-full text-center uppercase bg-blue-500 text-white border-transparent hover:bg-blue-600 text-base py-2 px-4"
     dir={null}
     onBlur={[Function]}
     onClick={[Function]}
