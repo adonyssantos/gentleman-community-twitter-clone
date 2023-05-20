@@ -11,7 +11,7 @@ export const appRouter = router({
   getSecretMessage: protectedProcedure.query(() => {
     const newLocal = 'you can now see this secret message!';
     return newLocal;
-  }),
+  })
 });
 
 export type AppRouter = typeof appRouter;
