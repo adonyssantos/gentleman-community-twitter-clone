@@ -34,23 +34,11 @@
     }
   ],
   "settings": {
-    "tailwindCSS.classAttributes": [
-      "className",
-      "tw",
-      "variants"
-    ],
+    "tailwindCSS.classAttributes": ["className", "tw", "variants"],
     "tailwindCSS.experimental.configFile": {
-      "../apps/web/tailwind.config.js": [
-        "../apps/**/*",
-        "../packages/**/*"
-      ]
+      "../apps/web/tailwind.config.js": ["../apps/**/*", "../packages/**/*"]
     },
-    "tailwindCSS.experimental.classRegex": [
-      [
-        "cva\\(([^)]*)\\)",
-        "[\"'`]([^\"'`]*).*?[\"'`]"
-      ]
-    ],
+    "tailwindCSS.experimental.classRegex": [["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]],
     "files.exclude": {
       "**/.git": true,
       "**/.svn": true,
@@ -68,7 +56,11 @@
       "**/.hg/store/**": true,
       "**/dist/**": true
     },
-    "typescript.tsdk": "✨ root/node_modules/typescript/lib"
+    "typescript.tsdk": "✨ root/node_modules/typescript/lib",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll": true
+    }
   },
   "extensions": {
     "recommendations": [
