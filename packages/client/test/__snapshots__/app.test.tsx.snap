@@ -2,30 +2,7 @@
 
 exports[`@universal-labs/primitives > Should render AppProvider 1`] = `
 <div
-  className="css-view-175oi2r"
+  className="css-view-175oi2r m-5 flex-1"
   dir={null}
->
-  <h1
-    aria-level={1}
-    className="css-text-1rynq56"
-    dir="auto"
-    role="heading"
-  >
-    Hello Gentleman Community!!
-  </h1>
-  <div
-    className="css-view-175oi2r r-cursor-1loqt21 r-touchAction-1otgn73 button bg-blue-500 text-white border-transparent hover:bg-blue-600 text-base py-2 px-4"
-    dir={null}
-    onBlur={[Function]}
-    onClick={[Function]}
-    onContextMenu={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    tabIndex="0"
-  >
-    <p>
-      Boton
-    </p>
-  </div>
-</div>
+/>
 `;

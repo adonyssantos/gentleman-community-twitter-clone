@@ -72,7 +72,9 @@
       "dbaeumer.vscode-eslint",
       "nrwl.angular-console",
       "esbenp.prettier-vscode",
-      "eliostruyf.vscode-typescript-exportallmodules"
+      "eliostruyf.vscode-typescript-exportallmodules",
+      "folke.vscode-monorepo-workspace",
+      "redhat.vscode-yaml"
     ]
   }
 }
