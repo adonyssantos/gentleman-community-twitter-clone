@@ -19,10 +19,15 @@ export function AppProvider({ children }: IAppProviderProps) {
     <View className='m-5 flex-1'>
       <H1>Hello Gentleman Community!!</H1>
       <TextInput label='Name' className='my-4' control={form.control} formField='name' />
-      <Button intent='primary' size='medium'>
-        <P>Boton</P>
+      <Button>
+        <P>Text Button</P>
       </Button>
-      <P>adfsdafasfsfd</P>
+      <Button variant='contained'>
+        <P>Contained Button</P>
+      </Button>
+      <Button variant='outlined'>
+        <P>Outlined Button</P>
+      </Button>
       {children}
     </View>
   );
