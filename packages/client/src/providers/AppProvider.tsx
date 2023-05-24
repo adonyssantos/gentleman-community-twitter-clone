@@ -11,7 +11,7 @@ export function AppProvider({ children }: IAppProviderProps) {
   // TODO: Add React Query Provider
   const form = useForm({
     defaultValues: {
-      name: 'test',
+      name: '',
     },
   });
 

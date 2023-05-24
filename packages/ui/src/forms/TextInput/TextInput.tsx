@@ -15,8 +15,6 @@ export interface TextInputProps extends NativeTextInputProps, VariantProps<typeo
 
 export function TextInput({
   className,
-  color,
-  size,
   control,
   formField,
   editable,
@@ -42,8 +40,6 @@ export function TextInput({
       <View className='h-full flex-row'>
         <UniversalTextInput
           className={textInput({
-            color,
-            size,
             className,
           })}
           onBlur={onBlur}
