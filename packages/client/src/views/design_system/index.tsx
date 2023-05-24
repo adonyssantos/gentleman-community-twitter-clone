@@ -7,6 +7,7 @@ export function DesignSystemView() {
   const form = useForm({
     defaultValues: {
       name: '',
+      password: '',
     },
   });
 
@@ -27,6 +28,14 @@ export function DesignSystemView() {
 
       <H2>Forms</H2>
       <TextInput label='Name' className='my-4' control={form.control} formField='name' />
+
+      <TextInput
+        label='Password'
+        className='my-4'
+        control={form.control}
+        formField='password'
+        secureTextEntry
+      />
     </View>
   );
 }
