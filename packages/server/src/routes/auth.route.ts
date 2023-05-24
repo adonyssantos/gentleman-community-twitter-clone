@@ -10,4 +10,10 @@ export const authRouter = router({
     }),
 
   logout: publicProcedure.mutation(async ({ ctx }) => ctx.supabase.auth.signOut()),
+
+  singup: publicProcedure
+    .input(z.object({ email: z.string().email(), username: z.string(), password: z.string() }))
+    .mutation(async ({ input, ctx }) => {
+      const { data, error } = await ctx.supabase.auth.signUp(input);
+    }),
 });
