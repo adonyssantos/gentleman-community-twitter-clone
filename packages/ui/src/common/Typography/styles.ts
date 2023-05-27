@@ -27,7 +27,7 @@ export const typography = cva('', {
   },
   compoundVariants: [],
   defaultVariants: {
-    color: 'primary',
+    color: 'inherit',
     align: 'inherit',
   },
 });
