@@ -4,13 +4,11 @@ import { H1, H2, H3, H4, H5, H6, P, Span } from '@universal-labs/primitives';
 import type { VariantProps } from 'class-variance-authority';
 import { typography } from './styles';
 
-//type Variant = 'body1' | 'body2' | 'caption' | 'title' | 'subtitle' | 'overline';
-
 export interface TypographyProps extends TextProps, VariantProps<typeof typography> {
   className?: string;
-  //children?: ReactNode | Array<ReactNode>;
   children?: ReactNode;
 }
+
 const createText = (variant: TypographyProps['variant']) => {
   switch (variant) {
     case 'body1':
