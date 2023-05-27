@@ -1,6 +1,7 @@
 import { Button } from '@root/ui/common/Button';
 import { Typography } from '@root/ui/common/Typography';
 import { TextInput } from '@root/ui/forms/TextInput/TextInput';
+import { P, View } from '@universal-labs/primitives';
 import { useForm } from 'react-hook-form';
 
 export function DesignSystemView() {
@@ -12,7 +13,7 @@ export function DesignSystemView() {
   });
 
   return (
-    <View className='m-5 flex-1'>
+    <View className='m-auto max-w-lg flex-1 p-5'>
       <Typography variant='h1'>Design System</Typography>
       <Typography variant='h2'>Common</Typography>
       <Typography variant='h3'>Buttons</Typography>
@@ -25,7 +26,7 @@ export function DesignSystemView() {
       <Button variant='outlined'>
         <P>Outlined Button</P>
       </Button>
-      
+
       <Typography variant='h3'>Forms</Typography>
       <TextInput label='Name' className='my-4' control={form.control} formField='name' />
       <TextInput
