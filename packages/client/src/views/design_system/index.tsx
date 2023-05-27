@@ -1,7 +1,6 @@
 import { Button } from '@root/ui/common/Button';
 import { Typography } from '@root/ui/common/Typography';
 import { TextInput } from '@root/ui/forms/TextInput/TextInput';
-import { H1, H2, H3, P, View } from '@universal-labs/primitives';
 import { useForm } from 'react-hook-form';
 
 export function DesignSystemView() {
@@ -14,9 +13,9 @@ export function DesignSystemView() {
 
   return (
     <View className='m-5 flex-1'>
-      <H1>Design System</H1>
-      <H2>Common</H2>
-      <H3>Buttons</H3>
+      <Typography variant='h1'>Design System</Typography>
+      <Typography variant='h2'>Common</Typography>
+      <Typography variant='h3'>Buttons</Typography>
       <Button>
         <P>Text Button</P>
       </Button>
@@ -26,7 +25,8 @@ export function DesignSystemView() {
       <Button variant='outlined'>
         <P>Outlined Button</P>
       </Button>
-      <H2>Forms</H2>
+      
+      <Typography variant='h3'>Forms</Typography>
       <TextInput label='Name' className='my-4' control={form.control} formField='name' />
       <TextInput
         label='Password'
@@ -35,6 +35,7 @@ export function DesignSystemView() {
         formField='password'
         secureTextEntry
       />
+      <Typography variant='h3'>Typography</Typography>
       <Typography variant='h1'>h1</Typography>
       <Typography variant='h2'>h2</Typography>
       <Typography variant='h3'>h3</Typography>
