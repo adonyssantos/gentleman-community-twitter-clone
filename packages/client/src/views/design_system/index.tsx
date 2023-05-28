@@ -1,6 +1,7 @@
 import { Button } from '@root/ui/common/Button';
 import { Typography } from '@root/ui/common/Typography';
 import { TextInput } from '@root/ui/forms/TextInput/TextInput';
+import { Avatar } from '@root/ui/images/Avatar';
 import { P, View } from '@universal-labs/primitives';
 import { useForm } from 'react-hook-form';
 
@@ -49,6 +50,29 @@ export function DesignSystemView() {
       <Typography variant='body2'>body2</Typography>
       <Typography variant='caption'>caption2</Typography>
       <Typography variant='overline'>overline</Typography>
+      <Typography variant='h3'>Images</Typography>
+      <Typography variant='h4'>Avatar</Typography>
+      <Avatar
+        alt=''
+        source={{
+          uri: 'https://avatars.githubusercontent.com/u/58638286?v=4',
+        }}
+      />
+      <Avatar
+        alt=''
+        source={{
+          uri: 'https://avatars.githubusercontent.com/u/58638286?v=4',
+        }}
+        variant='rounded'
+      />
+      <Avatar
+        alt=''
+        source={{
+          uri: 'https://avatars.githubusercontent.com/u/58638286?v=4',
+        }}
+        variant='square'
+      />
+      <Avatar alt='Adonys Santos' variant='square' />
     </View>
   );
 }
