@@ -2,9 +2,9 @@ import { cva } from 'class-variance-authority';
 
 export const typography = cva('', {
   variants: {
-    color: { 
-      primary: 'text-primary-500', 
-      inherit: '' 
+    color: {
+      primary: 'text-primary-500',
+      inherit: '',
     },
     align: {
       left: 'text-left',
