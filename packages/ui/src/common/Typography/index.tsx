@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import type { ReactNode } from 'react';
 import type { TextProps } from 'react-native';
 import { H1, H2, H3, H4, H5, H6, P, Span } from '@universal-labs/primitives';
 import type { VariantProps } from 'class-variance-authority';
