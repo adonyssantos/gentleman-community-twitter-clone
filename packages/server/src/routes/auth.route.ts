@@ -1,5 +1,5 @@
+import { userSchema } from '@root/shared/validators';
 import { TRPCError } from '@trpc/server';
-import { userSchema } from '../../../shared/src/constants';
 import { publicProcedure, router } from '../trpc';
 
 export const authRouter = router({
