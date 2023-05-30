@@ -1,5 +1,5 @@
 import { Button } from '@root/ui/common/Button';
-import { TextInput } from '@root/ui/forms/TextInput/TextInput';
+import { TextInput } from '@root/ui/forms/TextInput';
 import { H1, H2, H3, P, View } from '@universal-labs/primitives';
 import { useForm } from 'react-hook-form';
 
