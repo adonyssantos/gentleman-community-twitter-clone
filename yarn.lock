@@ -16007,6 +16007,7 @@ __metadata:
     eslint-plugin-react-hooks: 4.6.0
     eslint-plugin-unused-imports: 1.1.5
     lerna: 6.5.1
+    next: 13.2.1
     prettier: 2.8.3
     prettier-plugin-tailwindcss: 0.2.4
     prisma: 4.11.0
