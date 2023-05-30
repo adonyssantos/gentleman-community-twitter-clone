@@ -2,6 +2,9 @@ import { Button } from '@root/ui/common/Button';
 import { Typography } from '@root/ui/common/Typography';
 import { TextInput } from '@root/ui/forms/TextInput';
 import { Avatar } from '@root/ui/images/Avatar';
+import { BlackLogo } from '@root/ui/images/Logo/BlackLogo';
+import { ColorLogo } from '@root/ui/images/Logo/ColorLogo';
+import { WhiteLogo } from '@root/ui/images/Logo/WhiteLogo';
 import { P, View } from '@universal-labs/primitives';
 import { useForm } from 'react-hook-form';
 
@@ -73,6 +76,10 @@ export function DesignSystemView() {
         variant='square'
       />
       <Avatar alt='Adonys Santos' variant='square' />
+      <Typography variant='h4'>Logo</Typography>
+      <ColorLogo size='large' />
+      <WhiteLogo size='large' className='bg-black' />
+      <BlackLogo size='large' className='bg-white' />
     </View>
   );
 }
