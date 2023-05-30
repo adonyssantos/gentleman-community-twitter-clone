@@ -1,6 +1,6 @@
 import { Button } from '@root/ui/common/Button';
 import { Typography } from '@root/ui/common/Typography';
-import { TextInput } from '@root/ui/forms/TextInput/TextInput';
+import { TextInput } from '@root/ui/forms/TextInput';
 import { Avatar } from '@root/ui/images/Avatar';
 import { P, View } from '@universal-labs/primitives';
 import { useForm } from 'react-hook-form';
