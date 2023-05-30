@@ -3773,6 +3773,8 @@ __metadata:
 "@root/shared@workspace:*, @root/shared@workspace:packages/shared":
   version: 0.0.0-use.local
   resolution: "@root/shared@workspace:packages/shared"
+  dependencies:
+    zod: ^3.21.4
   languageName: unknown
   linkType: soft
 
@@ -18820,7 +18822,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"zod@npm:3.21.4":
+"zod@npm:3.21.4, zod@npm:^3.21.4":
   version: 3.21.4
   resolution: "zod@npm:3.21.4"
   checksum: f185ba87342ff16f7a06686767c2b2a7af41110c7edf7c1974095d8db7a73792696bcb4a00853de0d2edeb34a5b2ea6a55871bc864227dace682a0a28de33e1f
