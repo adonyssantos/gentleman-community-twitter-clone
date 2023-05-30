@@ -1,4 +1,4 @@
-import { userSchema } from '@root/shared/validators';
+import { userSchema } from '@root/shared/validators/user.model';
 import { TRPCError } from '@trpc/server';
 import { publicProcedure, router } from '../trpc';
 

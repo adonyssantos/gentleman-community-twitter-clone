@@ -3755,6 +3755,7 @@ __metadata:
   resolution: "@root/server@workspace:packages/server"
   dependencies:
     "@prisma/client": 4.11.0
+    "@root/shared": "workspace:*"
     "@supabase/auth-helpers-nextjs": 0.6.1
     "@supabase/supabase-js": 2.22.0
     "@trpc/next": 10.21.1
