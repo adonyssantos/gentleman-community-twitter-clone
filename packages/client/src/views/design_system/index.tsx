@@ -40,6 +40,7 @@ export function DesignSystemView() {
         formField='password'
         secureTextEntry
       />
+
       <Typography variant='h3'>Typography</Typography>
       <Typography variant='h1'>h1</Typography>
       <Typography variant='h2'>h2</Typography>
@@ -53,6 +54,7 @@ export function DesignSystemView() {
       <Typography variant='body2'>body2</Typography>
       <Typography variant='caption'>caption2</Typography>
       <Typography variant='overline'>overline</Typography>
+
       <Typography variant='h3'>Images</Typography>
       <Typography variant='h4'>Avatar</Typography>
       <Avatar
@@ -76,6 +78,7 @@ export function DesignSystemView() {
         variant='square'
       />
       <Avatar alt='Adonys Santos' variant='square' />
+
       <Typography variant='h4'>Logo</Typography>
       <ColorLogo size='large' />
       <WhiteLogo size='large' className='bg-black' />
