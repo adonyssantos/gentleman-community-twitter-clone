@@ -1,5 +1,5 @@
 import type { ImageProps, ImageSourcePropType } from 'react-native';
-import { VariantProps } from 'class-variance-authority';
+import type { VariantProps } from 'class-variance-authority';
 import { AvatarContainer } from './AvatarContainer';
 import { AvatarImg } from './AvatarImg';
 import { AvatarLetter } from './AvatarLetter';

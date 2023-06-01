@@ -15,6 +15,7 @@ const nextConfig = {
     '@universal-labs/primitives',
     '@universal-labs/styled',
     'react-native-web',
+    'react-native-svg',
     'react-native',
   ],
   /**

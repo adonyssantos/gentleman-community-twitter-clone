@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "sideEffects": false,
+  "type": "module",
   "main": "src/index.ts",
   "dependencies": {
     "@universal-labs/primitives": "1.11.0",

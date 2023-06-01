@@ -3911,6 +3911,7 @@ __metadata:
     react-dom: 18.2.0
     react-hook-form: 7.43.9
     react-native: 0.71.3
+    react-native-svg: 13.9.0
     react-test-renderer: 18.2.0
     vitest: 0.31.0
   languageName: unknown
