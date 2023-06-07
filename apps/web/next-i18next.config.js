@@ -25,7 +25,6 @@ module.exports = {
   resources: {
     en: {
       ...i18nEN,
-      // zod: zodEN,
     },
     es: {
       ...i18nES,
