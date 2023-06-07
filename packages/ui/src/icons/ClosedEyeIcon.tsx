@@ -1,6 +1,6 @@
 import Svg, { Path, type SvgProps } from 'react-native-svg';
 
-export function BackArrowIcon(props: SvgProps) {
+export function ClosedEyeIcon(props: SvgProps) {
   return (
     <Svg
       width={24}
@@ -14,7 +14,7 @@ export function BackArrowIcon(props: SvgProps) {
       {...props}
     >
       <Path d='M0 0h24v24H0z' stroke='none' />
-      <Path d='M5 12h14M5 12l6 6M5 12l6-6' />
+      <Path d='M21 9c-2.4 2.667-5.4 4-9 4-3.6 0-6.6-1.333-9-4M3 15l2.5-3.8M21 14.976L18.508 11.2M9 17l.5-4M15 17l-.5-4' />
     </Svg>
   );
 }

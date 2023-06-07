@@ -1,6 +1,6 @@
 import Svg, { Path, type SvgProps } from 'react-native-svg';
 
-export function BackArrowIcon(props: SvgProps) {
+export function BrandGoogleIcon(props: SvgProps) {
   return (
     <Svg
       width={24}
@@ -14,7 +14,7 @@ export function BackArrowIcon(props: SvgProps) {
       {...props}
     >
       <Path d='M0 0h24v24H0z' stroke='none' />
-      <Path d='M5 12h14M5 12l6 6M5 12l6-6' />
+      <Path d='M17.788 5.108A9 9 0 1021 12h-8' />
     </Svg>
   );
 }
