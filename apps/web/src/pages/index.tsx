@@ -1,4 +1,5 @@
 import { trpc } from '@root/client/trpc';
+import { HomeView } from '@root/client/views/home';
 import Head from 'next/head';
 
 export default function Home() {
@@ -11,7 +12,7 @@ export default function Home() {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <main>Hello from Next Web App!</main>
+      <HomeView />
       <p>{data?.greeting}</p>
     </>
   );

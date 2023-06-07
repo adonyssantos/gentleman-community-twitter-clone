@@ -19,9 +19,11 @@
     "@universal-labs/primitives": "1.11.0",
     "@universal-labs/styled": "2.0.3",
     "class-variance-authority": "0.6.0",
+    "i18next": "^22.5.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-hook-form": "7.43.9",
+    "react-i18next": "^12.3.1",
     "react-native": "0.71.3"
   },
   "devDependencies": {
