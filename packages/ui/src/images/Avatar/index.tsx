@@ -1,5 +1,6 @@
-import type { ImageProps, ImageSourcePropType } from 'react-native';
+import type { ImageSourcePropType } from 'react-native';
 import type { VariantProps } from 'class-variance-authority';
+import type { ImageProps } from '../Image';
 import { AvatarContainer } from './AvatarContainer';
 import { AvatarImg } from './AvatarImg';
 import { AvatarLetter } from './AvatarLetter';
@@ -10,7 +11,6 @@ export interface AvatarProps extends VariantProps<typeof avatar>, Omit<ImageProp
   source?: ImageSourcePropType;
   variant?: 'circular' | 'rounded' | 'square';
   alt: string;
-  className?: string;
 }
 
 export function Avatar({ source, alt, className, variant, ...props }: AvatarProps) {

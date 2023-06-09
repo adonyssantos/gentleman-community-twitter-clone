@@ -1,6 +1,6 @@
-import { Image } from '@universal-labs/primitives';
 import clsx from 'clsx';
 import type { AvatarProps } from '.';
+import { Image } from '../Image';
 
 export interface AvatarImgProps extends Omit<AvatarProps, 'variant'> {
   source: Required<AvatarProps>['source'];
