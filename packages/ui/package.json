@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "sideEffects": false,
+  "type": "module",
   "main": "src/index.ts",
   "dependencies": {
     "@universal-labs/primitives": "1.11.0",
@@ -11,7 +12,8 @@
     "clsx": "1.2.1",
     "react": "18.2.0",
     "react-hook-form": "7.43.9",
-    "react-native": "0.71.3"
+    "react-native": "0.71.3",
+    "react-native-svg": "13.9.0"
   },
   "devDependencies": {
     "@types/react": "18.0.28"
