@@ -9,7 +9,6 @@ const localePublicFolder = undefined;
  * @type {import('next-i18next').UserConfig}
  */
 module.exports = {
-  // debug: process.env.NODE_ENV !== 'production',
   initImmediate: true,
   saveMissing: false,
   strictMode: true,
@@ -19,7 +18,7 @@ module.exports = {
   },
   fallbackLng: 'en',
   react: {
-    useSuspense: false,
+    useSuspense: true,
   },
   load: 'currentOnly',
   resources: {

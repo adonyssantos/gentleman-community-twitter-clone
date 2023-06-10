@@ -20,6 +20,7 @@
     "@universal-labs/styled": "2.0.3",
     "class-variance-authority": "0.6.0",
     "i18next": "22.5.1",
+    "i18next-browser-languagedetector": "7.0.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-hook-form": "7.43.9",
