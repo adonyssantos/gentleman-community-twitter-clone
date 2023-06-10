@@ -1,5 +1,6 @@
 const { DefinePlugin } = require('webpack');
 const withPlugins = require('next-compose-plugins');
+const { i18n } = require('./next-i18next.config');
 
 /** @type {import('next').NextConfig} **/
 const nextConfig = {
@@ -18,6 +19,11 @@ const nextConfig = {
     'react-native-svg',
     'react-native',
   ],
+  // i18n
+  i18n: {
+    ...i18n,
+    localeDetection: true,
+  },
   /**
    * Transformation to apply for both preview and dev server
    * @param config {import('webpack').Configuration}
