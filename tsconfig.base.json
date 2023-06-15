@@ -18,6 +18,5 @@
       "@root/ui/*": ["./packages/ui/src/*"]
     }
   },
-  "include": ["env.d.ts"],
   "exclude": ["node_modules", ".yarn", "**/build"]
 }
