@@ -4,14 +4,13 @@ export const typography = cva('', {
   variants: {
     color: {
       primary: 'text-primary-500',
-      inherit: '',
+      inherit: 'text-inherit',
     },
     align: {
       left: 'text-left',
       center: 'text-center',
       right: 'text-right',
       justify: 'text-justify',
-      inherit: '',
     },
     variant: {
       body1: 'text-base font-normal',
@@ -22,6 +21,7 @@ export const typography = cva('', {
       h4: 'text-2xl font-normal',
       h5: 'text-xl font-normal',
       h6: 'text-base font-medium',
+      button: 'text-sm font-medium leading-4 uppercase',
       overline: 'text-10px leading-3 font-normal uppercase',
       caption: 'text-xs font-normal',
       subtitle1: 'text-base font-normal',
@@ -31,6 +31,6 @@ export const typography = cva('', {
   compoundVariants: [],
   defaultVariants: {
     color: 'inherit',
-    align: 'inherit',
+    align: 'left',
   },
 });
