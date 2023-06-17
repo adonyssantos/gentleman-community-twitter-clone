@@ -39,6 +39,12 @@ export function DesignSystemView() {
       <Button variant='outlined'>
         <P>Outlined Button</P>
       </Button>
+      <Button variant='outlined' startIcon={<CameraIcon />}>
+        <P>Left Icon</P>
+      </Button>
+      <Button variant='outlined' endIcon={<CameraIcon />}>
+        Right Icon
+      </Button>
 
       <Typography variant='h3'>Forms</Typography>
       <TextInput label='Name' className='my-4' control={form.control} formField='name' />
@@ -61,7 +67,8 @@ export function DesignSystemView() {
       <Typography variant='subtitle2'>subtitle</Typography>
       <Typography>body1(Default)</Typography>
       <Typography variant='body2'>body2</Typography>
-      <Typography variant='caption'>caption2</Typography>
+      <Typography variant='button'>button</Typography>
+      <Typography variant='caption'>caption</Typography>
       <Typography variant='overline'>overline</Typography>
 
       <Typography variant='h3'>Images</Typography>

@@ -1,12 +1,34 @@
+import type { ReactNode } from 'react';
 import type { PressableProps } from 'react-native';
-import { Pressable } from '@universal-labs/primitives';
+import { Pressable, Span } from '@universal-labs/primitives';
 import type { VariantProps } from 'class-variance-authority';
+import { Typography } from '../Typography';
 import { button } from './styles';
 
 export interface ButtonProps extends PressableProps, VariantProps<typeof button> {
   className?: string;
+  startIcon?: ReactNode;
+  endIcon?: ReactNode;
+  children?: ReactNode;
 }
 
-export function Button({ className, color, size, variant, ...props }: ButtonProps) {
-  return <Pressable className={button({ color, size, variant, className })} {...props} />;
+export function Button({
+  className,
+  color,
+  size,
+  variant,
+  children,
+  endIcon,
+  startIcon,
+  ...props
+}: ButtonProps) {
+  return (
+    <Pressable className={button({ color, size, variant, className })} {...props}>
+      {startIcon && <Span className='mr-2 '>{startIcon}</Span>}
+      <Typography variant='button' color='inherit' align='center'>
+        {children}
+      </Typography>
+      {endIcon && <Span className='ml-2'>{endIcon}</Span>}
+    </Pressable>
+  );
 }

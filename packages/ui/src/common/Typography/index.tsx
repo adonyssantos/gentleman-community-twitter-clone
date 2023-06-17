@@ -14,8 +14,9 @@ const createText = (variant: TypographyProps['variant']) => {
     case 'body1':
     case 'body2':
       return P;
-    case 'overline':
+    case 'button':
     case 'caption':
+    case 'overline':
       return Span;
     case 'h1':
       return H1;
