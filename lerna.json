@@ -4,7 +4,9 @@
   "version": "0.0.0",
   "access": "restricted",
   "changelog": false,
-  "allowBranch": ["main"],
+  "allowBranch": [
+    "main"
+  ],
   "npmClient": "yarn",
   "scope": "root",
   "createRelease": "github",

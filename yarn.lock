@@ -2564,6 +2564,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@hookform/resolvers@npm:^3.1.1":
+  version: 3.1.1
+  resolution: "@hookform/resolvers@npm:3.1.1"
+  peerDependencies:
+    react-hook-form: ^7.0.0
+  checksum: 41da04f0995438364f129484011a84c0d4333ce1b4cb7815593f58ece51bbd88c87db9ea6b1f5d0b7ae3e47bfcdf1a3f8e2328c46800e884074048473b56d5b5
+  languageName: node
+  linkType: hard
+
 "@humanwhocodes/config-array@npm:^0.11.8":
   version: 0.11.10
   resolution: "@humanwhocodes/config-array@npm:0.11.10"
@@ -3883,6 +3892,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@root/client@workspace:packages/client"
   dependencies:
+    "@hookform/resolvers": ^3.1.1
     "@root/shared": "workspace:*"
     "@root/ui": "workspace:*"
     "@tanstack/react-query": 4.29.5
