@@ -3,18 +3,20 @@
 
 generator client {
   provider = "prisma-client-js"
+  previewFeatures = ["multiSchema"]
 }
 
 datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
+  schemas = ["public"]
 }
 
 model User {
   id          String   @id @db.Uuid
   email       String   @unique
   username    String   @unique
-  name        String?
+  name        String
   avatarUrl   String?
   description String?
   location    String?
@@ -29,6 +31,7 @@ model User {
   @@index([email])
   @@index([username])
   @@map("users")
+  @@schema("public")
 }
 
 model Tweet{
@@ -44,6 +47,7 @@ model Tweet{
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
   @@map("tweets")
+  @@schema("public")
 }
 
 model Like {
@@ -57,4 +61,5 @@ model Like {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
   @@map("likes")
+  @@schema("public")
 }
