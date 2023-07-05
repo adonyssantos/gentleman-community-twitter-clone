@@ -39,7 +39,7 @@ export function DesignSystemView() {
       <Button variant='outlined'>
         <P>Outlined Button</P>
       </Button>
-      <Button variant='outlined' startIcon={<CameraIcon />}>
+      <Button variant='outlined' size={'medium'} startIcon={<CameraIcon />}>
         <P>Left Icon</P>
       </Button>
       <Button variant='outlined' endIcon={<CameraIcon />}>
