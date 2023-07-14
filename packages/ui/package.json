@@ -6,7 +6,7 @@
   "type": "module",
   "main": "src/index.ts",
   "dependencies": {
-    "@universal-labs/primitives": "latest",
+    "@universal-labs/primitives": "^4.1.2",
     "@universal-labs/styled": "2.0.3",
     "class-variance-authority": "0.6.0",
     "clsx": "1.2.1",

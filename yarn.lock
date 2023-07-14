@@ -3895,7 +3895,7 @@ __metadata:
     "@types/react-dom": 18.0.11
     "@types/react-native": 0.71.3
     "@types/react-test-renderer": 18.0.0
-    "@universal-labs/primitives": latest
+    "@universal-labs/primitives": ^4.1.2
     "@universal-labs/styled": 2.0.3
     "@vitejs/plugin-react-swc": 3.2.0
     class-variance-authority: 0.6.0
@@ -3953,7 +3953,7 @@ __metadata:
   resolution: "@root/ui@workspace:packages/ui"
   dependencies:
     "@types/react": 18.0.28
-    "@universal-labs/primitives": latest
+    "@universal-labs/primitives": ^4.1.2
     "@universal-labs/styled": 2.0.3
     class-variance-authority: 0.6.0
     clsx: 1.2.1
@@ -4970,7 +4970,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@universal-labs/primitives@npm:latest":
+"@universal-labs/primitives@npm:^4.1.2":
   version: 4.1.2
   resolution: "@universal-labs/primitives@npm:4.1.2"
   dependencies:
