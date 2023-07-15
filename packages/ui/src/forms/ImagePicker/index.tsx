@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { CameraIcon } from '@root/ui/icons/CameraIcon';
+import { UserCircle } from '@root/ui/icons/UserCircle';
 import { Image } from '@root/ui/images/Image';
 import { Pressable, Span, View } from '@universal-labs/primitives';
 import { launchImageLibraryAsync } from 'expo-image-picker';
@@ -13,11 +14,9 @@ const ImageContainer = ({ onPress }: Props) => {
   return (
     <View style={{ width: 200, height: 200 }}>
       <Pressable className='flex h-full w-full items-center justify-center' onPress={onPress}>
-        <Image
-          source={{ uri: '/user-circle.svg' }}
-          resizeMode='cover'
-          className='absolute inset-0 z-0 flex-1 justify-center'
-        />
+        <Span className='absolute inset-0 z-0 flex-1 justify-center'>
+          <UserCircle />
+        </Span>
         <Span className='z-10 rounded-full bg-slate-700 p-3'>
           <CameraIcon color='#e2e8f0' />
         </Span>
