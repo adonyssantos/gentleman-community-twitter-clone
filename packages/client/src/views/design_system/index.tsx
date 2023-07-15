@@ -1,5 +1,6 @@
 import { Button } from '@root/ui/common/Button';
 import { Typography } from '@root/ui/common/Typography';
+import { ImagePicker } from '@root/ui/forms/ImagePicker';
 import { TextInput } from '@root/ui/forms/TextInput';
 import { BackArrowIcon } from '@root/ui/icons/BackArrowIcon';
 import { BrandGithubIcon } from '@root/ui/icons/BrandGithubIcon';
@@ -55,6 +56,8 @@ export function DesignSystemView() {
         formField='password'
         secureTextEntry
       />
+
+      <ImagePicker />
 
       <Typography variant='h3'>Typography</Typography>
       <Typography variant='h1'>h1</Typography>
