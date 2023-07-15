@@ -3957,6 +3957,7 @@ __metadata:
     "@universal-labs/styled": 2.0.3
     class-variance-authority: 0.6.0
     clsx: 1.2.1
+    expo-image-picker: ^14.3.1
     react: 18.2.0
     react-hook-form: 7.43.9
     react-native: 0.71.3
@@ -9049,6 +9050,26 @@ __metadata:
   peerDependencies:
     expo: "*"
   checksum: 813c424fbb521bfc00e1116deaa5a7c65ac1cb85ac78f5472ab2946e061fb0c0053a5bc7c5309545dc9f42d59faf9bd19eb1c2d895c59768f095c114241ac1e0
+  languageName: node
+  linkType: hard
+
+"expo-image-loader@npm:~4.3.0":
+  version: 4.3.0
+  resolution: "expo-image-loader@npm:4.3.0"
+  peerDependencies:
+    expo: "*"
+  checksum: 0440ac80a7b2331cdfd0db88aac0ba2fe61689e6347e2c6bedba6bf3220b95410c724ac9004252486870b582fc36d47d4bff008bba7052dcee2830256950974f
+  languageName: node
+  linkType: hard
+
+"expo-image-picker@npm:^14.3.1":
+  version: 14.3.1
+  resolution: "expo-image-picker@npm:14.3.1"
+  dependencies:
+    expo-image-loader: ~4.3.0
+  peerDependencies:
+    expo: "*"
+  checksum: c39046d3bf69efacc7afec4f3f49b5694ebb9d373f6c5d300568c56d72dc5ee50397a4d2d9ff877b932dfed812a0177419c5307fc85486326c501eac84c9a00d
   languageName: node
   linkType: hard
 

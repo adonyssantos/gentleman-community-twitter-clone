@@ -18,6 +18,8 @@ const nextConfig = {
     'react-native-web',
     'react-native-svg',
     'react-native',
+    'expo-image-picker',
+    'expo-modules-core',
   ],
   // i18n
   i18n: {
