@@ -3957,7 +3957,7 @@ __metadata:
     "@universal-labs/styled": 2.0.3
     class-variance-authority: 0.6.0
     clsx: 1.2.1
-    expo-image-picker: ^14.3.1
+    expo-image-picker: 14.3.1
     react: 18.2.0
     react-hook-form: 7.43.9
     react-native: 0.71.3
@@ -9062,7 +9062,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"expo-image-picker@npm:^14.3.1":
+"expo-image-picker@npm:14.3.1":
   version: 14.3.1
   resolution: "expo-image-picker@npm:14.3.1"
   dependencies:
