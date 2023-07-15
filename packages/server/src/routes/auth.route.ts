@@ -1,4 +1,4 @@
-import { userSchema } from '@root/shared/validators/user.model';
+import { userSchema, validateSchema } from '@root/shared/validators/user.model';
 import { TRPCError } from '@trpc/server';
 import { z } from 'zod';
 import { publicProcedure, router } from '../trpc';
@@ -22,7 +22,7 @@ export const authRouter = router({
   }),
 
   validateUsername: publicProcedure
-    .input(z.object({ username: z.string() }))
+    .input(validateSchema)
     .output(z.boolean())
     .query(async ({ input, ctx }) => {
       const user = ctx.prisma.user.findUnique({ where: { username: input.username } });
