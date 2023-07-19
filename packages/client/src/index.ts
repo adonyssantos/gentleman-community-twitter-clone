@@ -5,7 +5,7 @@
 
 // // Hooks
 // export { usePasswordReset } from './hooks/usePasswordReset';
-// export { useSignIn } from './hooks/useSignIn';
+export { useSignIn } from './hooks/useSignIn';
 // export { useSignUp } from './hooks/useSignUp';
 
 // // Views
