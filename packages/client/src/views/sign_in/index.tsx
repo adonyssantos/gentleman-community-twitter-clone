@@ -18,8 +18,8 @@ export function SignInView() {
   });
 
   return (
-    <View className='h-max w-full'>
-      <View className='m-5 flex h-full w-full items-center justify-center'>
+    <>
+      <View className='m-auto max-h-full max-w-lg flex-1 items-center justify-center p-5'>
         <ColorLogo size='small' />
       </View>
       <View className='mt-10 flex h-full flex-1 items-center justify-center'>
@@ -47,11 +47,15 @@ export function SignInView() {
           <Button variant='contained'>{t('next')}</Button>
           <Button variant='outlined'>{t('forgot_password')}</Button>
           <View className='flex flex-row gap-1 pt-8'>
-            <Typography variant='subtitle1'>{t('do_not_have_an_account')}</Typography>
-            <Typography color={'primary'}>{t('sign_up')}</Typography>
+            <Typography variant='subtitle1' className='text-slate-700'>
+              {t('do_not_have_an_account')}
+            </Typography>
+            <Typography variant='subtitle1' color={'primary'}>
+              {t('sign_up')}
+            </Typography>
           </View>
         </View>
       </View>
-    </View>
+    </>
   );
 }
