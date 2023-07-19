@@ -85,7 +85,7 @@ This projects involves the use of several technologies.
 - React Universal Tailwind
 - Supabase
 - tRPC
-- Typescript
+- TypeScript
 - Vite
 - Zod
 
