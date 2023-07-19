@@ -46,7 +46,7 @@ export function SignInView() {
           />
           <Button variant='contained'>{t('next')}</Button>
           <Button variant='outlined'>{t('forgot_password')}</Button>
-          <View className='flex flex-row gap-1 pt-8'>
+          <View className='flex flex-row gap-1 py-8'>
             <Typography variant='subtitle1' className='text-slate-700'>
               {t('do_not_have_an_account')}
             </Typography>
