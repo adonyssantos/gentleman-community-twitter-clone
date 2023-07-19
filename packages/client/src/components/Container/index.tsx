@@ -5,7 +5,7 @@ import clsx from 'clsx';
 
 export interface ContainerProps extends ViewProps {
   children: ReactNode;
-  className: string;
+  className?: string;
 }
 export function Container({ children, className, ...props }: ContainerProps) {
   return (
