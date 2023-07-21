@@ -1,3 +1,4 @@
+import { AuthProvider } from '../context/auth.context';
 import TrpcProvider from '../trpc/trpc.provider';
 import { TranslationsProvider } from './TranslationsProvider';
 
@@ -9,7 +10,9 @@ export interface AppProviderProps {
 export function AppProvider({ pageProps, children }: AppProviderProps) {
   return (
     <TrpcProvider pageProps={pageProps}>
-      <TranslationsProvider>{children}</TranslationsProvider>
+      <TranslationsProvider>
+        <AuthProvider>{children}</AuthProvider>
+      </TranslationsProvider>
     </TrpcProvider>
   );
 }

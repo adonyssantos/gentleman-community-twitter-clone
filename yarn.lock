@@ -3885,6 +3885,7 @@ __metadata:
   dependencies:
     "@root/shared": "workspace:*"
     "@root/ui": "workspace:*"
+    "@supabase/supabase-js": ^2.26.0
     "@tanstack/react-query": 4.29.5
     "@testing-library/jest-dom": 5.16.5
     "@testing-library/react": 14.0.0
@@ -3910,6 +3911,7 @@ __metadata:
     react-native-svg: 13.9.0
     react-test-renderer: 18.2.0
     vitest: 0.31.0
+    zod: ^3.21.4
   languageName: unknown
   linkType: soft
 
@@ -3928,6 +3930,7 @@ __metadata:
     jest: 29.5.0
     jest-mock-extended: 3.0.4
     next: 13.2.1
+    superjson: 1.13.1
     ts-jest: 29.1.0
     ts-node: 10.9.1
     zod: 3.21.4
@@ -4070,12 +4073,30 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@supabase/gotrue-js@npm:^2.31.0":
+  version: 2.44.1
+  resolution: "@supabase/gotrue-js@npm:2.44.1"
+  dependencies:
+    cross-fetch: ^3.1.5
+  checksum: 63cbe401b5eea55c366e4eac3825750c11c1d458613da06b992e8aa890714167ffe68a880ba3b095e986113a1bb8e91d2ea07d94d84ef5d7ee1d524e0f3a5418
+  languageName: node
+  linkType: hard
+
 "@supabase/postgrest-js@npm:^1.1.1":
   version: 1.7.0
   resolution: "@supabase/postgrest-js@npm:1.7.0"
   dependencies:
     cross-fetch: ^3.1.5
   checksum: 0b8418401915627efb3d350fbab99eb67265b2d52d09ea06b0d38cb2195458962e239001a010e380535e3f4026da0154b8c8468034052c93c17004da9831a3ae
+  languageName: node
+  linkType: hard
+
+"@supabase/postgrest-js@npm:^1.7.0":
+  version: 1.7.2
+  resolution: "@supabase/postgrest-js@npm:1.7.2"
+  dependencies:
+    cross-fetch: ^3.1.5
+  checksum: 4da09fa0a39079867dc0fa472dfa5d50d3fa0a7845a236e4c501cebc4983113f45aeeefee6e53856f34938b2ff298cbd4f8127178fe0efde6d86db6c16010979
   languageName: node
   linkType: hard
 
@@ -4087,6 +4108,17 @@ __metadata:
     "@types/websocket": ^1.0.3
     websocket: ^1.0.34
   checksum: 0d6071991dfeeafcbfada30f39f6ed76ae83aefbdede611788879d493f7500c796050e0bef0bd589b9cf79cce0e170defe8a1d364e8cec3c8783cc4ac5314a3c
+  languageName: node
+  linkType: hard
+
+"@supabase/realtime-js@npm:^2.7.3":
+  version: 2.7.3
+  resolution: "@supabase/realtime-js@npm:2.7.3"
+  dependencies:
+    "@types/phoenix": ^1.5.4
+    "@types/websocket": ^1.0.3
+    websocket: ^1.0.34
+  checksum: a6e789098ef7c388faf3a3b483ae91e1d45f8b7d02ae4ae1ad8ef0d7246678777aab1e0f3f2cbaf25549b27926c94bce9adc5c90f3f2693e1ccf780d5941411d
   languageName: node
   linkType: hard
 
@@ -4110,6 +4142,20 @@ __metadata:
     "@supabase/storage-js": ^2.5.1
     cross-fetch: ^3.1.5
   checksum: ede087eb21c8aaf6f2e6cecffb63bedeaa2adae0683d10057d38ceeb7ab24da2a49e57f32d12399764a08e42880fa08d4c32bfc46d3180a97c278558249be704
+  languageName: node
+  linkType: hard
+
+"@supabase/supabase-js@npm:^2.26.0":
+  version: 2.26.0
+  resolution: "@supabase/supabase-js@npm:2.26.0"
+  dependencies:
+    "@supabase/functions-js": ^2.1.0
+    "@supabase/gotrue-js": ^2.31.0
+    "@supabase/postgrest-js": ^1.7.0
+    "@supabase/realtime-js": ^2.7.3
+    "@supabase/storage-js": ^2.5.1
+    cross-fetch: ^3.1.5
+  checksum: bf53886a2314e8e0b119be224fdd08976ad3ce1da35db095dbbc960c1bfe7e1458054bcf11bdd72dd83d3bbaec2c78f8e897e225afe5cf1767233094b72a02dc
   languageName: node
   linkType: hard
 
@@ -4522,7 +4568,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/formidable@npm:^3.4.0":
+"@types/formidable@npm:3.4.0":
   version: 3.4.0
   resolution: "@types/formidable@npm:3.4.0"
   dependencies:
@@ -7190,6 +7236,15 @@ __metadata:
   version: 2.0.0
   resolution: "convert-source-map@npm:2.0.0"
   checksum: 63ae9933be5a2b8d4509daca5124e20c14d023c820258e484e32dc324d34c2754e71297c94a05784064ad27615037ef677e3f0c00469fb55f409d2bb21261035
+  languageName: node
+  linkType: hard
+
+"copy-anything@npm:^3.0.2":
+  version: 3.0.5
+  resolution: "copy-anything@npm:3.0.5"
+  dependencies:
+    is-what: ^4.1.8
+  checksum: d39f6601c16b7cbd81cdb1c1f40f2bf0f2ca0297601cf7bfbb4ef1d85374a6a89c559502329f5bada36604464df17623e111fe19a9bb0c3f6b1c92fe2cbe972f
   languageName: node
   linkType: hard
 
@@ -11231,6 +11286,13 @@ __metadata:
     call-bind: ^1.0.2
     get-intrinsic: ^1.1.1
   checksum: 5d8698d1fa599a0635d7ca85be9c26d547b317ed8fd83fc75f03efbe75d50001b5eececb1e9971de85fcde84f69ae6f8346bc92d20d55d46201d328e4c74a367
+  languageName: node
+  linkType: hard
+
+"is-what@npm:^4.1.8":
+  version: 4.1.15
+  resolution: "is-what@npm:4.1.15"
+  checksum: fe27f6cd4af41be59a60caf46ec09e3071bcc69b9b12a7c871c90f54360edb6d0bc7240cb944a251fb0afa3d35635d1cecea9e70709876b368a8285128d70a89
   languageName: node
   linkType: hard
 
@@ -17371,6 +17433,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"superjson@npm:1.13.1":
+  version: 1.13.1
+  resolution: "superjson@npm:1.13.1"
+  dependencies:
+    copy-anything: ^3.0.2
+  checksum: 9c8c664a924ce097250112428805ccc8b500018b31a91042e953d955108b8481c156005d836b413940c9fa5f124a3195f55f3a518fe76510a254a59f9151a204
+  languageName: node
+  linkType: hard
+
 "supports-color@npm:^5.3.0":
   version: 5.5.0
   resolution: "supports-color@npm:5.5.0"
@@ -18705,7 +18776,7 @@ __metadata:
   dependencies:
     "@root/client": "workspace:*"
     "@root/server": "workspace:*"
-    "@types/formidable": ^3.4.0
+    "@types/formidable": 3.4.0
     "@types/node": 18.15.0
     "@types/react": 18.0.28
     "@types/react-dom": 18.0.11
@@ -19210,7 +19281,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"zod@npm:3.21.4":
+"zod@npm:3.21.4, zod@npm:^3.21.4":
   version: 3.21.4
   resolution: "zod@npm:3.21.4"
   checksum: f185ba87342ff16f7a06686767c2b2a7af41110c7edf7c1974095d8db7a73792696bcb4a00853de0d2edeb34a5b2ea6a55871bc864227dace682a0a28de33e1f

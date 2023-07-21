@@ -2,6 +2,7 @@ import React, { ReactNode } from 'react';
 import { LOCAL_URL, VERCEL_URL } from '@root/shared/constants';
 import { Hydrate, QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { httpBatchLink, loggerLink } from '@trpc/client';
+import superjson from 'superjson';
 import { trpc } from '.';
 
 const getUrl = () =>
@@ -47,6 +48,7 @@ const TrpcProvider = ({ pageProps, children }: ITrpcProviderProps) => {
           },
         }),
       ],
+      transformer: superjson,
     }),
   );
   return (
