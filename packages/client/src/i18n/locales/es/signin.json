@@ -1,0 +1,11 @@
+{
+  "title": "Iniciar sesión en Twitter(Clone)",
+  "with_google": "Iniciar sesión con Google",
+  "with_gitHub": "Iniciar sesión con GitHub",
+  "or": "o",
+  "alternative": "Correo electrónico",
+  "next": "Siguiente",
+  "forgot_password": "¿Olvidaste tu contraseña?",
+  "do_not_have_an_account": "¿No tienes una cuenta?",
+  "sign_up": "Regístrate"
+}

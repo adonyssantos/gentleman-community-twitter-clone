@@ -1,5 +1,1 @@
-import { DesignSystemView } from '@root/client/views/design_system';
-
-export default function Home() {
-  return <DesignSystemView />;
-}
+export { DesignSystemView as default } from '@root/client/views/design_system';
