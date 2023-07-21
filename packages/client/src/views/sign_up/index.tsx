@@ -28,20 +28,22 @@ export function SignUpView() {
             <P className='my-2 h-0.5 flex-1 self-center bg-slate-400' />
           </Typography>
           <Button variant='contained'>{t('create_account')}</Button>
-          <Typography variant='caption' className=''>
-            {t('agree')}
-            <Link href={'terms'} className='text-primary-500'>
-              {t('link_terms')}
-            </Link>
-            {t('and')}
-            <Link href={'privacy'} className='text-primary-500'>
-              {t('link_privacy')}
-            </Link>
-            {t('include')}
-            <Link href={'cookies'} className='text-primary-500'>
-              {t('cookie_use')}
-            </Link>
-          </Typography>
+          <View className='flex flex-row justify-center'>
+            <Typography variant='caption' className=''>
+              {t('agree')}
+              <Typography variant='caption' color={'primary'}>
+                {t('link_terms')}
+              </Typography>
+              {t('and')}
+              <Typography variant='caption' color={'primary'}>
+                {t('link_privacy')}
+              </Typography>
+              {t('include')}
+              <Typography variant='caption' color={'primary'}>
+                {t('cookie_use')}
+              </Typography>
+            </Typography>
+          </View>
           <Typography variant='subtitle1'>
             {t('already')}
             <Link href={'login'} className='text-primary-500'>
