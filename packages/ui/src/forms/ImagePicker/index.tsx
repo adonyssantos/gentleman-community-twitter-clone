@@ -1,16 +1,18 @@
-import { useState } from 'react';
 import { CameraIcon } from '@root/ui/icons/CameraIcon';
 import { UserCircle } from '@root/ui/icons/UserCircle';
-import { Image } from '@root/ui/images/Image';
 import { Pressable, Span, View } from '@universal-labs/primitives';
 import { launchImageLibraryAsync } from 'expo-image-picker';
 import { MediaTypeOptions } from 'expo-image-picker/build/ImagePicker.types';
 
-interface Props {
+interface ContainerProps {
   onPress: () => void;
 }
 
-const ImageContainer = ({ onPress }: Props) => {
+interface Props {
+  onFinish: (uri: string) => void;
+}
+
+const ImageContainer = ({ onPress }: ContainerProps) => {
   return (
     <View style={{ width: 200, height: 200 }}>
       <Pressable className='flex h-full w-full items-center justify-center' onPress={onPress}>
@@ -25,9 +27,7 @@ const ImageContainer = ({ onPress }: Props) => {
   );
 };
 
-export const ImagePicker = () => {
-  const [image, setImage] = useState<string | null>(null);
-
+export const ImagePicker = ({ onFinish }: Props) => {
   const pickImage = async () => {
     let result = await launchImageLibraryAsync({
       mediaTypes: MediaTypeOptions.Images,
@@ -37,14 +37,14 @@ export const ImagePicker = () => {
     });
 
     if (!result.canceled) {
-      setImage(result.assets[0].uri);
+      const uri = result.assets[0].uri;
+      onFinish(uri);
     }
   };
 
   return (
     <>
       <ImageContainer onPress={pickImage} />
-      {image && <Image source={{ uri: image }} style={{ width: 200, height: 200 }} />}
     </>
   );
 };
