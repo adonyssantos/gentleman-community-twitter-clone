@@ -18,24 +18,24 @@ Conventional Commits is the specification we use to write semantically valuable 
 
 #### Supported types
 
-- `feat`
-- `style`
-- `test`
-- `docs`
-- `chore`
-- `ci`
-- `build`
-- `perf`
+- `feat`: A new feature.
+- `style`: Changes related with some of the following (white-space, formatting, missing semi-colons, etc).
+- `test`: Adding missing tests or correcting existing tests.
+- `docs`: Changes made on documentation files.
+- `chore`: Changes that don't modify src or test files. For housekeeping/cleanup.
+- `ci`: Changes to our CI configuration files and scripts (examples: Travis, Circle, BrowserStack, SauceLabs)
+- `build`: Changes to build system or external dependencies
+- `perf` (AKA Performance): Code change that improves performance
 
 #### Supported scopes
 
-- `root`
-- `mobile`
-- `web`
-- `client`
-- `server`
-- `shared`
-- `types`
+- `root`: Changes made to project's root level files.
+- `mobile`: Changes made to the mobile environment (within the `/apps/mobile/` folder).
+- `web`: Changes made to the web environment. (within the `/apps/web/` folder).
+- `client`: Changes related with client tasks (examples: ). (within the `/packages/client/` folder).
+- `server`: Changes made on server environment. (within the `/packages/server/` folder).
+- `shared`: Changes made within the `/packages/shared/` folder.
+- `types`: Changes made within the `/packages/types/` folder.
 
 Samples:
 ```text
@@ -58,10 +58,10 @@ Gitflow is a term used to describe the workflow and guidelines we follow in this
 
 Just follow 4 steps!
 
-1. Fork this repo
-2. Create a new branch. Name it with whathever name you want.
-3. Make your changes
-4. Send your PR ****following conventional commits on it's title****.
+1. Fork this repo (Or clone it, if you are an authorized contributor).
+2. Create a new branch. Name it whathever name you want.
+3. Make your changes.
+4. Send your PR ****following conventional commits on its title****.
 
 After following these steps, wait for one of our developers to accept your contribution, and you will have contributed to one of the many open source projects here on GitHub! 🎉
 
@@ -72,4 +72,4 @@ Hear what Git has to say about it:
 > Understanding and mastering this feature [Git branching] gives you a powerful and unique tool and can entirely change the way that you develop.
 > [Source](https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell#:~:text=Understanding%20and%20mastering%20this%20feature%20gives%20you%20a%20powerful%20and%20unique%20tool%20and%20can%20entirely%20change%20the%20way%20that%20you%20develop)
 
-Feel motivated by the fact that you will never have to worry about messing things up and your productivity will multiply by a thousand.
+Feel motivated by the fact that you will never have to worry about messing things up, and your productivity will multiply by a thousand.
