@@ -1,3 +1,4 @@
+import { Container } from '@root/client/components/Container';
 import { useI18n } from '@root/client/hooks/useI18n';
 import { Button } from '@root/ui/common/Button';
 import { Typography } from '@root/ui/common/Typography';
@@ -18,7 +19,7 @@ export function SignInView() {
   });
 
   return (
-    <>
+    <Container className=''>
       <View className='m-auto max-h-full max-w-lg flex-1 items-center justify-center p-5'>
         <ColorLogo size='small' />
       </View>
@@ -56,6 +57,6 @@ export function SignInView() {
           </View>
         </View>
       </View>
-    </>
+    </Container>
   );
 }
