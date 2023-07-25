@@ -12,7 +12,3 @@ export const loginSchema = z.object({
 });
 
 export const validateSchema = z.object({ username: z.string() });
-
-export const passwordResetSchema = z.object({
-  email: z.string().email(),
-});

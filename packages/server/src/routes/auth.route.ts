@@ -1,9 +1,5 @@
-import {
-  loginSchema,
-  singupSchema,
-  validateSchema,
-  passwordResetSchema,
-} from '@root/shared/validators/user.model';
+import { passwordResetSchema } from '@root/shared/validators/password.model';
+import { loginSchema, singupSchema, validateSchema } from '@root/shared/validators/user.model';
 import { TRPCError } from '@trpc/server';
 import { z } from 'zod';
 import { publicProcedure, router } from '../trpc';
