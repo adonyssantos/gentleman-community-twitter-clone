@@ -5,6 +5,7 @@ An **Open Source Project** made by the Gentleman Programming Community.
 ## Table of contents
 
 - [Table of contents](#table-of-contents)
+- [How to contribute?](#how-to-contribute?)
 - [Run Locally](#run-locally)
 - [Scripts](#scripts)
   - [Web App](#web-app)
@@ -16,6 +17,10 @@ An **Open Source Project** made by the Gentleman Programming Community.
   - [Tools](#tools)
   - [Project Workspaces](#project-workspaces)
   - [Atomic Design Approach](#atomic-design-approach)
+
+# How to contribute?
+
+If you want to contribute to this repository, simply follow our [contributing guidelines](CONTRIBUTING.md) and you will be good to go.
 
 ## Run Locally
 
@@ -85,7 +90,7 @@ This projects involves the use of several technologies.
 - React Universal Tailwind
 - Supabase
 - tRPC
-- Typescript
+- TypeScript
 - Vite
 - Zod
 
