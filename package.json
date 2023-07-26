@@ -16,9 +16,9 @@
     "mobile:ios": "yarn workspace mobile ios",
     "server:test": "yarn workspace @root/server test",
     "test": "npx nx run-many --target=test --all --parallel",
-    "web": "yarn lerna run dev --scope web",
-    "web:build": "yarn lerna run build --scope web",
-    "web:preview": "yarn lerna run preview --scope web"
+    "web": "npx nx run dev --project=web",
+    "web:build": "npx nx run build --project=web",
+    "web:preview": "npx nx run preview --project=web"
   },
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "4.1.1",
