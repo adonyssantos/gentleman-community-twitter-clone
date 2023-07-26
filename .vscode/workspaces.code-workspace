@@ -75,12 +75,10 @@
       "jamesinaxx.sort-package",
       "bradlc.vscode-tailwindcss",
       "prisma.prisma",
-      "prisma.prisma-insider",
       "dsznajder.es7-react-js-snippets",
       "dbaeumer.vscode-eslint",
       "nrwl.angular-console",
       "esbenp.prettier-vscode",
-      "eliostruyf.vscode-typescript-exportallmodules",
       "folke.vscode-monorepo-workspace",
       "redhat.vscode-yaml"
     ]

@@ -1,5 +1,7 @@
 import { Button } from '@root/ui/common/Button';
+import { Divider } from '@root/ui/common/Divider';
 import { Typography } from '@root/ui/common/Typography';
+import { ImagePicker } from '@root/ui/forms/ImagePicker';
 import { TextInput } from '@root/ui/forms/TextInput';
 import { BackArrowIcon } from '@root/ui/icons/BackArrowIcon';
 import { BrandGithubIcon } from '@root/ui/icons/BrandGithubIcon';
@@ -56,6 +58,8 @@ export function DesignSystemView() {
         secureTextEntry
       />
 
+      <ImagePicker />
+
       <Typography variant='h3'>Typography</Typography>
       <Typography variant='h1'>h1</Typography>
       <Typography variant='h2'>h2</Typography>
@@ -72,7 +76,7 @@ export function DesignSystemView() {
       <Typography variant='overline'>overline</Typography>
 
       <Typography variant='h3'>Images</Typography>
-      <Typography variant='h4'>Avatar</Typography>
+      <Typography variant='h3'>Avatar</Typography>
       <Avatar
         alt=''
         source={{
@@ -110,6 +114,11 @@ export function DesignSystemView() {
       <ClosedEyeIcon />
       <OpenEyeIcon />
       <DateIcon />
+      <Typography variant='h4'>Divider</Typography>
+      <Divider />
+      <Divider>
+        <Typography>Divider with text</Typography>
+      </Divider>
     </View>
   );
 }
