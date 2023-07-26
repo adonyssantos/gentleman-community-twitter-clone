@@ -1,4 +1,5 @@
 import { Button } from '@root/ui/common/Button';
+import { Divider } from '@root/ui/common/Divider';
 import { Typography } from '@root/ui/common/Typography';
 import { ImagePicker } from '@root/ui/forms/ImagePicker';
 import { TextInput } from '@root/ui/forms/TextInput';
@@ -113,6 +114,8 @@ export function DesignSystemView() {
       <ClosedEyeIcon />
       <OpenEyeIcon />
       <DateIcon />
+
+      <Divider />
     </View>
   );
 }

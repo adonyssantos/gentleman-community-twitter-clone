@@ -20,7 +20,7 @@ export function SignInView() {
   });
 
   return (
-    <Container className='flex min-h-screen justify-between'>
+    <Container className='flex min-h-screen max-w-md justify-between'>
       <View className='items-center p-4'>
         <ColorLogo size='small' />
       </View>
@@ -37,7 +37,7 @@ export function SignInView() {
               {t('with_gitHub')}
             </Button>
           </View>
-          <View className='mx-1 my-2 flex flex-row items-center'>
+          <View className='mx-1 my-0 flex flex-row items-center'>
             <View className='h-0.5 flex-1 bg-gray-400' />
             <Typography className='flex px-4'>{t('or')}</Typography>
             <View className=' h-0.5 flex-1 bg-gray-400' />
