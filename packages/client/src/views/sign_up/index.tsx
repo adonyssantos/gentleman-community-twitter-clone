@@ -26,12 +26,9 @@ export function SignUpView() {
               {t('with_gitHub')}
             </Button>
           </View>
-          <Divider text={t('or')} textAling='left' />
-          <View className='mx-1 my-0 flex flex-row items-center'>
-            <View className='h-0.5 flex-1 bg-gray-400' />
+          <Divider>
             <Typography className='flex px-4'>{t('or')}</Typography>
-            <View className='h-0.5 flex-1 bg-gray-400 ' />
-          </View>
+          </Divider>
           <Button variant='contained'>{t('create_account')}</Button>
           <View className='flex flex-row justify-center p-1'>
             <Typography variant='caption' className=''>

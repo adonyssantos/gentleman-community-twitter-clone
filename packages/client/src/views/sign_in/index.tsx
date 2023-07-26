@@ -1,6 +1,7 @@
 import { Container } from '@root/client/components/Container';
 import { useI18n } from '@root/client/hooks/useI18n';
 import { Button } from '@root/ui/common/Button';
+import { Divider } from '@root/ui/common/Divider';
 import { Typography } from '@root/ui/common/Typography';
 import { TextInput } from '@root/ui/forms/TextInput';
 import { BrandGithubIcon } from '@root/ui/icons/BrandGithubIcon';
@@ -37,11 +38,9 @@ export function SignInView() {
               {t('with_gitHub')}
             </Button>
           </View>
-          <View className='mx-1 my-0 flex flex-row items-center'>
-            <View className='h-0.5 flex-1 bg-gray-400' />
+          <Divider>
             <Typography className='flex px-4'>{t('or')}</Typography>
-            <View className=' h-0.5 flex-1 bg-gray-400' />
-          </View>
+          </Divider>
           <View className='flex flex-col gap-2'>
             <TextInput
               label={t('alternative')}
