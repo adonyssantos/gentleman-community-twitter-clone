@@ -38,9 +38,7 @@ export function SignInView() {
               {t('with_gitHub')}
             </Button>
           </View>
-          <Divider>
-            <Typography className='flex px-4'>{t('or')}</Typography>
-          </Divider>
+          <Divider>{t('or')}</Divider>
           <View className='flex flex-col gap-2'>
             <TextInput
               label={t('alternative')}
