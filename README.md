@@ -115,8 +115,8 @@ The following table shows the project's workspaces.
 | `🚀 web`          | /apps/web        | Web app                     |
 | `📦 @root/client` | /packages/client | Client package              |
 | `📦 @root/server` | /packages/server | Server package              |
-| `📦 @root/shared` | /packages/shared | Shared packages             |
-| `📦 @root/types`  | /packages/types  | Types packages              |
+| `📦 @root/shared` | /packages/shared | Shared package              |
+| `📦 @root/types`  | /packages/types  | Types package               |
 | `📦 @root/ui`     | /packages/ui     | UI package                  |
 
 ### Atomic Design Approach
