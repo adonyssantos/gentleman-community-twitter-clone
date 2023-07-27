@@ -15,6 +15,7 @@ export const button = cva(
         contained: 'border-transparent',
         outlined: 'bg-transparent',
         text: 'bg-transparent text-primary-500',
+        link: 'bg-transparent text-primary-500 hover:underline px-0',
       },
       align: {
         left: 'justify-start',
@@ -38,6 +39,11 @@ export const button = cva(
         color: 'primary',
         variant: 'contained',
         className: 'bg-primary-500 text-white hover:bg-primary-600',
+      },
+      {
+        color: 'primary',
+        variant: 'link',
+        className: '',
       },
     ],
     defaultVariants: {
