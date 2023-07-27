@@ -2,6 +2,7 @@ import type { ReactNode } from 'react';
 import type { PressableProps } from 'react-native';
 import { Pressable, Span } from '@universal-labs/primitives';
 import type { VariantProps } from 'class-variance-authority';
+import clsx from 'clsx';
 import { Typography } from '../Typography';
 import { button } from './styles';
 
@@ -10,6 +11,7 @@ export interface ButtonProps extends PressableProps, VariantProps<typeof button>
   startIcon?: ReactNode;
   endIcon?: ReactNode;
   children?: ReactNode;
+  textCase?: 'uppercase' | 'lowercase' | 'normalcase' | 'capitalize';
 }
 
 export function Button({
@@ -18,14 +20,16 @@ export function Button({
   size,
   variant,
   children,
+  align,
+  textCase = 'uppercase',
   endIcon,
   startIcon,
   ...props
 }: ButtonProps) {
   return (
-    <Pressable className={button({ color, size, variant, className })} {...props}>
+    <Pressable className={button({ color, size, variant, align, className })} {...props}>
       {startIcon && <Span className='mr-2 '>{startIcon}</Span>}
-      <Typography variant='button' color='inherit' align='center'>
+      <Typography variant='button' color='inherit' align={align} className={clsx(textCase)}>
         {children}
       </Typography>
       {endIcon && <Span className='ml-2'>{endIcon}</Span>}

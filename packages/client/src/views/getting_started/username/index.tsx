@@ -63,7 +63,7 @@ export function UsernameView() {
           formField='username'
         />
         <View className='flex flex-row justify-start p-1'>{renderItems}</View>
-        <Button color={'primary'} variant={'text'} className='items-start'>
+        <Button color={'primary'} align={'left'} variant={'text'} textCase='capitalize'>
           {t('show_more')}
         </Button>
       </View>
