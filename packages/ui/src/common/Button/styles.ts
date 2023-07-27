@@ -40,11 +40,6 @@ export const button = cva(
         variant: 'contained',
         className: 'bg-primary-500 text-white hover:bg-primary-600',
       },
-      {
-        color: 'primary',
-        variant: 'link',
-        className: '',
-      },
     ],
     defaultVariants: {
       color: 'primary',
