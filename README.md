@@ -1,4 +1,4 @@
-# 🐦 Twitter Clone 🐦
+# 🐦 Twitter Clone (Gentleman Programming) 🐦
 
 An **Open Source Project** made by the Gentleman Programming Community.
 
