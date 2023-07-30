@@ -3,5 +3,9 @@
     "title": "What should we call you?",
     "subtitle": "Your @username is unique. You can always change it later.",
     "label": "Username"
+  },
+  "pickProfilePicture": {
+    "title": "Pick a profile picture",
+    "subtitle": "Have a favorite selfie? Upload it now."
   }
 }

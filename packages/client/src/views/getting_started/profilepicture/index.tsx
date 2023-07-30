@@ -1,10 +1,36 @@
+import { useState } from 'react';
+import { Container } from '@root/client/components/Container';
+import { useI18n } from '@root/client/hooks/useI18n';
+import { Button } from '@root/ui/common/Button';
 import { Typography } from '@root/ui/common/Typography';
+import { ImagePicker } from '@root/ui/forms/ImagePicker';
+import { ColorLogo } from '@root/ui/images/Logo/ColorLogo';
 import { View } from '@universal-labs/primitives';
 
 export function ProfilePictureView() {
+  const [imageUri, setImageUri] = useState<string | null>(null);
+  const { t } = useI18n(['gettingStarted', 'common']);
+
   return (
-    <View className='m-auto max-w-lg flex-1 p-5'>
-      <Typography variant='h1'>Profile Picture</Typography>
-    </View>
+    <Container className='flex min-h-screen max-w-md justify-between'>
+      <View className='flex flex-col space-y-5'>
+        <View className='items-center p-4'>
+          <ColorLogo size='small' />
+        </View>
+        <View className='flex flex-col gap-2'>
+          <Typography variant='h4' className='!font-bold '>
+            {t('pickProfilePicture.title')}
+          </Typography>
+          <Typography variant='subtitle1' className='text-slate-700'>
+            {t('pickProfilePicture.subtitle')}
+          </Typography>
+        </View>
+        {/* image component */}
+        <ImagePicker onFinish={(uri) => setImageUri(uri)} />
+        <Button variant={!imageUri ? 'outlined' : 'contained'}>
+          {!imageUri ? t('common:skip') : t('common:finish')}
+        </Button>
+      </View>
+    </Container>
   );
 }
