@@ -29,7 +29,6 @@ export function UsernameView() {
         key={index}
         variant='link'
         textCase='lowercase'
-        className='!m-0 !p-0'
         onPress={() => {
           form.setValue('username', item);
         }}
@@ -59,7 +58,7 @@ export function UsernameView() {
           formField='username'
           defaultValue={suggest[0]}
         />
-        <View className='grid grid-flow-row grid-cols-4 grid-rows-2'>{renderItems}</View>
+        <View className='grid grid-flow-row grid-cols-4'>{renderItems}</View>
         <Button
           color={'primary'}
           align={'left'}
