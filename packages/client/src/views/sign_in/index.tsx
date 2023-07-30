@@ -25,7 +25,7 @@ export function SignInView() {
       <View className='items-center p-4'>
         <ColorLogo size='small' />
       </View>
-      <View className='flex flex-col space-y-5'>
+      <View className='flex flex-col space-y-4'>
         <Typography variant='h4' className='!font-bold '>
           {t('title')}
         </Typography>

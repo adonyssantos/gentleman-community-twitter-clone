@@ -13,7 +13,7 @@ export function ProfilePictureView() {
 
   return (
     <Container className='flex min-h-screen max-w-md justify-between'>
-      <View className='flex flex-col space-y-5'>
+      <View className='flex flex-col space-y-4'>
         <View className='items-center p-4'>
           <ColorLogo size='small' />
         </View>
@@ -22,7 +22,7 @@ export function ProfilePictureView() {
           subtitle={t('pickProfilePicture.subtitle')}
           className='flex flex-col gap-2'
         />
-        <View className='flex items-center'>
+        <View className='flex items-center p-8'>
           <ImagePicker onFinish={(uri) => setImageUri(uri)} />
         </View>
       </View>

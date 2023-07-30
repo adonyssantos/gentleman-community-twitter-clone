@@ -34,7 +34,7 @@ export function UsernameView() {
 
   return (
     <Container className='flex min-h-screen max-w-md justify-between'>
-      <View className='flex flex-col space-y-5'>
+      <View className='flex flex-col space-y-4'>
         <View className='items-center p-4'>
           <ColorLogo size='small' />
         </View>
