@@ -1,4 +1,5 @@
 import { Container } from '@root/client/components/Container';
+import { HeaderPage } from '@root/client/components/HeaderPage';
 import { useI18n } from '@root/client/hooks/useI18n';
 import { Button } from '@root/ui/common/Button';
 import { Divider } from '@root/ui/common/Divider';
@@ -14,9 +15,7 @@ export function SignUpView() {
   return (
     <Container className='flex min-h-screen max-w-md justify-center'>
       <View className='flex flex-col space-y-4'>
-        <Typography variant='h4' className='!font-bold'>
-          {t('title')}
-        </Typography>
+        <HeaderPage title={t('title')} />
         <View>
           <View className='flex flex-col gap-2'>
             <Button variant='outlined' startIcon={<BrandGoogleIcon />}>
