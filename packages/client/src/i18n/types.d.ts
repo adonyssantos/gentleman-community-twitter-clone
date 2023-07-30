@@ -5,7 +5,7 @@ declare module 'i18next' {
   // Extend CustomTypeOptions
   interface CustomTypeOptions {
     // custom namespace type, if you changed it
-    defaultNS: 'common' | 'signin' | 'signup' | 'username';
+    defaultNS: 'common' | 'signin' | 'signup' | 'gettingStarted';
     // custom resources type
     resources: typeof i18nEN;
     // other

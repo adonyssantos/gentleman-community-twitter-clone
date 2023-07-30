@@ -18,7 +18,7 @@ const suggest = [
 ];
 
 export function UsernameView() {
-  const { t } = useI18n(['username']);
+  const { t } = useI18n(['gettingStarted', 'common']);
 
   const form = useForm({
     defaultValues: {
@@ -32,21 +32,6 @@ export function UsernameView() {
 
   const isSuggested = form.watch('username') === suggest[0];
 
-  const renderItems = itemsRendered.map((item, index) => {
-    return (
-      <Button
-        key={index}
-        variant='link'
-        textCase='lowercase'
-        onPress={() => {
-          form.setValue('username', item);
-        }}
-      >
-        {index === itemsRendered.length - 1 ? `@${item}` : `@${item},`}
-      </Button>
-    );
-  });
-
   return (
     <Container className='flex min-h-screen max-w-md justify-between'>
       <View className='flex flex-col space-y-5'>
@@ -55,34 +40,49 @@ export function UsernameView() {
         </View>
         <View className='flex flex-col gap-2'>
           <Typography variant='h4' className='!font-bold '>
-            {t('title')}
+            {t('pickUsername.title')}
           </Typography>
           <Typography variant='subtitle1' className='text-slate-700'>
-            {t('subtitle')}
+            {t('pickUsername.subtitle')}
           </Typography>
         </View>
         <TextInput
-          label='Username'
+          label={t('pickUsername.label')}
           control={form.control}
           formField='username'
           defaultValue={suggest[0]}
         />
-        <View className='grid grid-flow-row grid-cols-4'>{renderItems}</View>
+        <View className='grid grid-flow-row grid-cols-4'>
+          {itemsRendered.map((item, index) => {
+            return (
+              <Button
+                key={index}
+                variant={'link'}
+                textCase='lowercase'
+                onPress={() => {
+                  form.setValue('username', item);
+                }}
+              >
+                {index === itemsRendered.length - 1 ? `@${item}` : `@${item},`}
+              </Button>
+            );
+          })}
+        </View>
         <Button
           color={'primary'}
           align={'left'}
           variant={'link'}
-          textCase='lowercase'
+          textCase='capitalize'
           className='!p-0'
           onPress={() => {
             setShowMore(!showMore);
           }}
         >
-          {showMore ? t('showLess') : t('showMore')}
+          {showMore ? t('common:showLess') : t('common:showMore')}
         </Button>
       </View>
       <Button variant={isSuggested ? 'outlined' : 'contained'}>
-        {isSuggested ? t('skip') : t('next')}
+        {isSuggested ? t('common:skip') : t('common:next')}
       </Button>
     </Container>
   );
