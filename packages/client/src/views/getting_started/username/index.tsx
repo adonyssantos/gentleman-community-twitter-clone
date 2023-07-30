@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { Container } from '@root/client/components/Container';
+import { HeaderPage } from '@root/client/components/HeaderPage';
 import { useI18n } from '@root/client/hooks/useI18n';
 import { Button } from '@root/ui/common/Button';
-import { Typography } from '@root/ui/common/Typography';
 import { TextInput } from '@root/ui/forms/TextInput';
 import { ColorLogo } from '@root/ui/images/Logo/ColorLogo';
 import { View } from '@universal-labs/primitives';
@@ -38,14 +38,11 @@ export function UsernameView() {
         <View className='items-center p-4'>
           <ColorLogo size='small' />
         </View>
-        <View className='flex flex-col gap-2'>
-          <Typography variant='h4' className='!font-bold '>
-            {t('pickUsername.title')}
-          </Typography>
-          <Typography variant='subtitle1' className='text-slate-700'>
-            {t('pickUsername.subtitle')}
-          </Typography>
-        </View>
+        <HeaderPage
+          title={t('pickUsername.title')}
+          subtitle={t('pickUsername.subtitle')}
+          className='flex flex-col gap-2'
+        />
         <TextInput
           label={t('pickUsername.label')}
           control={form.control}

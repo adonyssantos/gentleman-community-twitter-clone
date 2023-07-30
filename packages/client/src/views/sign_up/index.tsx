@@ -13,7 +13,7 @@ export function SignUpView() {
 
   return (
     <Container className='flex min-h-screen max-w-md justify-center'>
-      <View className='flex flex-col space-y-10'>
+      <View className='flex flex-col space-y-5'>
         <Typography variant='h4' className='!font-bold'>
           {t('title')}
         </Typography>
