@@ -24,13 +24,14 @@ export function ProfilePictureView() {
           <Typography variant='subtitle1' className='text-slate-700'>
             {t('pickProfilePicture.subtitle')}
           </Typography>
+          <View className='flex items-center'>
+            <ImagePicker onFinish={(uri) => setImageUri(uri)} />
+          </View>
         </View>
-        {/* image component */}
-        <ImagePicker onFinish={(uri) => setImageUri(uri)} />
-        <Button variant={!imageUri ? 'outlined' : 'contained'}>
-          {!imageUri ? t('common:skip') : t('common:finish')}
-        </Button>
       </View>
+      <Button variant={!imageUri ? 'outlined' : 'contained'}>
+        {!imageUri ? t('common:skip') : t('common:finish')}
+      </Button>
     </Container>
   );
 }
