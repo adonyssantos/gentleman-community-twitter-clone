@@ -1,5 +1,7 @@
 {
   "title": "¿Como deberíamos llamarte?",
   "subtitle": "Su @username es único. Siempre puedes cambiarlo más tarde.",
-  "show_more": "Mostrar más"
+  "showMore": "Mostrar más",
+  "showLess": "Mostrar menos",
+  "next": "Siguiente"
 }
