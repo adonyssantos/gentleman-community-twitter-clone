@@ -11,7 +11,7 @@ export interface ButtonProps extends PressableProps, VariantProps<typeof button>
   startIcon?: ReactNode;
   endIcon?: ReactNode;
   children?: ReactNode;
-  textCase?: 'uppercase' | 'lowercase' | 'normalcase' | 'capitalize';
+  textCase?: 'uppercase' | 'lowercase' | 'capitalize' | 'normal-case';
 }
 
 export function Button({

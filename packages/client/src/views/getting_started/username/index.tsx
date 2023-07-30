@@ -50,7 +50,6 @@ export function UsernameView() {
           label={t('pickUsername.label')}
           control={form.control}
           formField='username'
-          defaultValue={suggest[0]}
         />
         <View className='grid grid-flow-row grid-cols-4'>
           {itemsRendered.map((item, index) => {
@@ -72,7 +71,7 @@ export function UsernameView() {
           color={'primary'}
           align={'left'}
           variant={'link'}
-          textCase='capitalize'
+          textCase='normal-case'
           className='!p-0'
           onPress={() => {
             setShowMore(!showMore);
@@ -81,7 +80,7 @@ export function UsernameView() {
           {showMore ? t('common:showLess') : t('common:showMore')}
         </Button>
       </View>
-      <Button variant={isSuggested ? 'outlined' : 'contained'}>
+      <Button variant={isSuggested ? 'outlined' : 'contained'} textCase='normal-case'>
         {isSuggested ? t('common:skip') : t('common:next')}
       </Button>
     </Container>
