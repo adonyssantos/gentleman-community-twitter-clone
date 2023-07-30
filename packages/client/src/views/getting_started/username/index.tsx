@@ -8,20 +8,29 @@ import { ColorLogo } from '@root/ui/images/Logo/ColorLogo';
 import { View } from '@universal-labs/primitives';
 import { useForm } from 'react-hook-form';
 
-const suggest = ['username', 'username1', 'username2', 'username3', 'username4', 'username5'];
+const suggest = [
+  'defaultUserName',
+  'username1',
+  'username2',
+  'username3',
+  'username4',
+  'username5',
+];
 
 export function UsernameView() {
   const { t } = useI18n(['username']);
 
   const form = useForm({
     defaultValues: {
-      username: '',
+      username: suggest[0],
     },
   });
 
   const [showMore, setShowMore] = useState(false);
 
-  const itemsRendered = showMore ? suggest.slice(0, 4) : suggest.slice(0, 2);
+  const itemsRendered = showMore ? suggest.slice(1, 6) : suggest.slice(1, 3);
+
+  const isSuggested = form.watch('username') === suggest[0];
 
   const renderItems = itemsRendered.map((item, index) => {
     return (
@@ -72,7 +81,9 @@ export function UsernameView() {
           {showMore ? t('showLess') : t('showMore')}
         </Button>
       </View>
-      <Button variant='contained'>{t('next')}</Button>
+      <Button variant={isSuggested ? 'outlined' : 'contained'}>
+        {isSuggested ? t('skip') : t('next')}
+      </Button>
     </Container>
   );
 }
