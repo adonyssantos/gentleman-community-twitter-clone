@@ -21,7 +21,7 @@ export function UsernameView() {
 
   const [showMore, setShowMore] = useState(false);
 
-  const itemsRendered = showMore ? suggest.slice(0, 5) : suggest.slice(0, 2);
+  const itemsRendered = showMore ? suggest.slice(0, 4) : suggest.slice(0, 2);
 
   const renderItems = itemsRendered.map((item, index) => {
     return (
@@ -34,7 +34,7 @@ export function UsernameView() {
           form.setValue('username', item);
         }}
       >
-        {index === itemsRendered.length - 1 ? item : `@${item},`}
+        {index === itemsRendered.length - 1 ? `@${item}` : `@${item},`}
       </Button>
     );
   });
