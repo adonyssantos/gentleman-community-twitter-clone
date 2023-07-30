@@ -12,7 +12,7 @@ export function UsernameView() {
 
   const form = useForm({
     defaultValues: {
-      alternative: '',
+      username: '',
     },
   });
   const suggest = [
@@ -27,20 +27,37 @@ export function UsernameView() {
   const itemsRendered = suggest.slice(1, 3);
 
   const renderItems = itemsRendered.map((item, index) => {
-    if (index === itemsRendered.length - 1) {
-      return (
-        <Typography variant='subtitle1' color='primary' key={index}>
-          @{item}
-        </Typography>
-      );
-    } else {
-      return (
-        <Typography variant='subtitle1' color='primary' key={index}>
-          {`@${item}, `}
-        </Typography>
-      );
-    }
+    return (
+      <Button
+        key={index}
+        variant='outlined'
+        textCase='lowercase'
+        onPress={() => {
+          form.setValue('username', item);
+        }}
+      >
+        @{item}
+      </Button>
+    );
   });
+
+  const handleShowMore = () => {
+    const itemsRendered = suggest.slice(1, 5);
+    const renderItems = itemsRendered.map((item, index) => {
+      return (
+        <Button
+          key={index}
+          variant='outlined'
+          textCase='lowercase'
+          onPress={() => {
+            form.setValue('username', item);
+          }}
+        >
+          @{item}
+        </Button>
+      );
+    });
+  };
 
   return (
     <Container className='flex min-h-screen max-w-md justify-between'>
@@ -63,7 +80,13 @@ export function UsernameView() {
           formField='username'
         />
         <View className='flex flex-row justify-start'>{renderItems}</View>
-        <Button color={'primary'} align={'left'} variant={'link'} textCase='lowercase'>
+        <Button
+          color={'primary'}
+          align={'left'}
+          variant={'link'}
+          textCase='lowercase'
+          onPress={handleShowMore}
+        >
           {t('show_more')}
         </Button>
       </View>
