@@ -24,7 +24,9 @@ export const authRouter = router({
         },
       },
     });
-    if (!data.user && error) {
+    if (data.user && data.user.email) {
+      await ctx.supabase.auth.signInWithOtp({ email: data.user.email });
+    } else {
       throw new TRPCError({ message: 'Something went wrong', code: 'BAD_REQUEST' });
     }
 

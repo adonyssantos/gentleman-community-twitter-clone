@@ -1,3 +1,4 @@
+import * as React from 'react';
 import { CameraIcon } from '@root/ui/icons/CameraIcon';
 import { UserCircle } from '@root/ui/icons/UserCircle';
 import { Pressable, Span, View } from '@universal-labs/primitives';
@@ -70,7 +71,6 @@ export const ImagePicker = ({ onFinish }: Props) => {
       }
     });
   };
-
   return (
     <>
       <ImageContainer onPress={onPress} />
