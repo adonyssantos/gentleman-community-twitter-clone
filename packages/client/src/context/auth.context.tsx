@@ -1,4 +1,5 @@
 import { createContext, useContext, useState } from 'react';
+import { ReactNode } from 'react';
 import { loginSchema, singupSchema } from '@root/shared/validators/user.model';
 import { Session } from '@supabase/supabase-js';
 import z from 'zod';
@@ -17,7 +18,7 @@ export const AuthContext = createContext<AuthContext | null>(null);
 export const useAuthContext = () => useContext(AuthContext);
 
 interface AuthProviderProps {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
 export const AuthProvider = ({ children }: AuthProviderProps) => {

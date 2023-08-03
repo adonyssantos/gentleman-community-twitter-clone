@@ -11,7 +11,7 @@ interface ContainerProps {
   onPress: () => void;
 }
 
-interface Props {
+interface ImagePickerProps {
   onFinish: ({ blob, file }: PickProps) => void;
 }
 
@@ -35,12 +35,13 @@ const ImageContainer = ({ onPress }: ContainerProps) => {
   );
 };
 
-export const ImagePicker = ({ onFinish }: Props) => {
+export const ImagePicker = ({ onFinish }: ImagePickerProps) => {
   const onPress = async () => {
     const res = await pickImage();
     onFinish(res);
   };
   const pickImage = async () => {
+    // eslint-disable-next-line no-async-promise-executor
     return new Promise<{ blob: Blob; file: ImageResult }>(async (resolve, reject) => {
       let result = await launchImageLibraryAsync({
         mediaTypes: MediaTypeOptions.Images,

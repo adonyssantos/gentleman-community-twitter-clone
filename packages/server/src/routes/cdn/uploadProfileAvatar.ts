@@ -4,7 +4,7 @@ import formidable from 'formidable';
 import { createReadStream } from 'fs';
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-interface IUploadPayload {
+interface UploadPayload {
   error?: string;
   success: boolean;
 }
@@ -17,7 +17,7 @@ const uploadProfileAvatarHandler = async (
   try {
     const userId = request.headers['user-id'] as string;
     const form = formidable();
-    const result = await new Promise<IUploadPayload>((resolve) => {
+    const result = await new Promise<UploadPayload>((resolve) => {
       form.parse(request, async (err, _, files) => {
         if (!userId) {
           return response.status(401).json({ success: false });
