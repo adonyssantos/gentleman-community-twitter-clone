@@ -12,7 +12,7 @@ export interface AuthContext {
   login: (data: z.infer<typeof loginSchema>) => Promise<any>;
   singup: (data: z.infer<typeof singupSchema>) => Promise<any>;
   logout: () => Promise<any>;
-  PasswordReset: (data: z.infer<typeof passwordResetSchema>) => Promise<any>;
+  passwordReset: (data: z.infer<typeof passwordResetSchema>) => Promise<any>;
 }
 
 export const AuthContext = createContext<AuthContext | null>(null);
@@ -48,8 +48,7 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
     },
   });
   const logout = trpc.auth.logout.useMutation();
-  // TODO: type PasswordReset parameter
-  const PasswordReset = trpc.auth.passwordReset.useMutation({});
+  const passwordReset = trpc.auth.passwordReset.useMutation();
   return (
     <AuthContext.Provider
       value={{
@@ -57,7 +56,7 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
         login: login.mutateAsync,
         logout: logout.mutateAsync,
         singup: singup.mutateAsync,
-        PasswordReset: PasswordReset.mutateAsync,
+        passwordReset: passwordReset.mutateAsync,
       }}
     >
       {children}
