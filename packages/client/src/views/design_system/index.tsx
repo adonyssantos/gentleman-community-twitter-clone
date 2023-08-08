@@ -1,4 +1,5 @@
 import { Button } from '@root/ui/common/Button';
+import { Divider } from '@root/ui/common/Divider';
 import { Typography } from '@root/ui/common/Typography';
 import { ImagePicker } from '@root/ui/forms/ImagePicker';
 import { TextInput } from '@root/ui/forms/TextInput';
@@ -75,7 +76,7 @@ export function DesignSystemView() {
       <Typography variant='overline'>overline</Typography>
 
       <Typography variant='h3'>Images</Typography>
-      <Typography variant='h4'>Avatar</Typography>
+      <Typography variant='h3'>Avatar</Typography>
       <Avatar
         alt=''
         source={{
@@ -113,6 +114,11 @@ export function DesignSystemView() {
       <ClosedEyeIcon />
       <OpenEyeIcon />
       <DateIcon />
+      <Typography variant='h4'>Divider</Typography>
+      <Divider />
+      <Divider>
+        <Typography>Divider with text</Typography>
+      </Divider>
     </View>
   );
 }

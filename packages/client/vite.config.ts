@@ -17,6 +17,7 @@ export default defineConfig({
       'react-native': 'react-native-web',
       '@root/client': path.resolve(__dirname, '../client/src'),
       '@root/ui': path.resolve(__dirname, '../ui/src'),
+      '@root/shared': path.resolve(__dirname, '../shared/src'),
     },
   },
   build: {

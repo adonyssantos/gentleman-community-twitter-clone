@@ -9,6 +9,9 @@
       }
     }
   },
+  "affected": {
+    "defaultBase": "main"
+  },
   "targetDefaults": {
     "build": {
       "dependsOn": [
