@@ -14,3 +14,10 @@ export const loginSchema = z.object({
 });
 
 export const validateSchema = z.object({ username: z.string() });
+
+export const usernameGeneratorInputSchema = z.object({
+  name: z.string(),
+  email: z.string().email(),
+});
+
+export const usernameGeneratorOutputSchema = z.array(z.string());
