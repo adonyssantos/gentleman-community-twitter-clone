@@ -3,8 +3,10 @@
   "with_google": "Sign in with Google",
   "with_gitHub": "Sign in with GitHub",
   "or": "or",
-  "alternative": "Email",
+  "alternative_email": "Email",
+  "alternative_password": "Password",
   "next": "Next",
+  "submit": "Submit",
   "forgot_password": "Forgot password?",
   "do_not_have_an_account": "Don't have an account?",
   "sign_up": "Sign up"

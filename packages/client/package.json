@@ -11,6 +11,7 @@
     "@types/node": "18.15.0"
   },
   "dependencies": {
+    "@hookform/resolvers": "^3.2.0",
     "@root/shared": "workspace:*",
     "@root/ui": "workspace:*",
     "@supabase/supabase-js": "2.26.0",
@@ -28,7 +29,8 @@
     "react-i18next": "12.3.1",
     "react-native": "0.71.3",
     "react-native-svg": "13.9.0",
-    "zod": "3.21.4"
+    "zod": "3.21.4",
+    "zod-i18n-map": "^2.14.0"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "5.16.5",

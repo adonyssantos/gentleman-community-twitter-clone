@@ -17,7 +17,7 @@ export function TextInput({
   className,
   control,
   formField,
-  editable,
+  editable = true,
   label,
   ...props
 }: TextInputProps) {
@@ -44,7 +44,7 @@ export function TextInput({
           })}
           onBlur={onBlur}
           onFocus={onFocus}
-          onChangeText={field.onChange}
+          onChangeText={editable ? field.onChange : () => {}}
           autoCapitalize='none'
           value={field.value ?? ''}
           {...props}

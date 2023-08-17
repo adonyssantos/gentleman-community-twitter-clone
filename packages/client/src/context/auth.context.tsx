@@ -32,7 +32,7 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
       dispatch({
         isAuth: true,
         isLoading: false,
-        userSession: data.session!.user!,
+        userSession: data.session ? data.session.user : undefined,
       });
     },
   });
@@ -41,7 +41,7 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
       dispatch({
         isAuth: true,
         isLoading: false,
-        userSession: data.session!.user!,
+        userSession: data.session ? data.session.user : undefined,
       });
     },
   });
