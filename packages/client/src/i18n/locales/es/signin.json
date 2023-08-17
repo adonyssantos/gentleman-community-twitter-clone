@@ -3,8 +3,10 @@
   "with_google": "Iniciar sesión con Google",
   "with_gitHub": "Iniciar sesión con GitHub",
   "or": "o",
-  "alternative": "Correo electrónico",
+  "alternative_email": "Correo electrónico",
+  "alternative_password": "Contraseña",
   "next": "Siguiente",
+  "submit": "Ingresar",
   "forgot_password": "¿Olvidaste tu contraseña?",
   "do_not_have_an_account": "¿No tienes una cuenta?",
   "sign_up": "Regístrate"

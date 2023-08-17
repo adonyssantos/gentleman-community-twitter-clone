@@ -1,0 +1,99 @@
+{
+  "errors": {
+    "custom": "Valores inválidos",
+    "invalid_arguments": "Argumentos de función inválidos",
+    "invalid_date": "Fecha inválida",
+    "invalid_enum_value": "Enum inválido. Esperado {{- options}}, recibido {{received}}",
+    "invalid_intersection_types": "La intersección no pudo unirse",
+    "invalid_literal": "Valor literal inválido, esperado {{expected}}",
+    "invalid_return_type": "Valor de retorno inválido",
+    "invalid_string": {
+      "cuid": "{{validation}} inválido",
+      "email": "{{validation}} inválido",
+      "endsWith": "Valor inválido: debe terminar en {{endsWith}}",
+      "regex": "inválido",
+      "startsWith": "Valor inválido: debe comenzar con {{startsWith}}",
+      "url": "{{validation}} inválido",
+      "uuid": "{{validation}} inválido"
+    },
+    "invalid_type": "Valor esperado {{expected}}, recibido {{received}}",
+    "invalid_type_received_undefined": "Requerido",
+    "invalid_union": "Valor inválido",
+    "invalid_union_discriminator": "Discriminación inválida. Esperada {{- options}}",
+    "not_multiple_of": "Número debe ser multiplo de {{multipleOf}}",
+    "too_big": {
+      "array": {
+        "inclusive": "Array puede contener máximo {{maximum}} elemento(s)",
+        "not_inclusive": "Array puede contener menos de {{maximum}} elemento(s)"
+      },
+      "date": {
+        "inclusive": "Fecha debe ser menor o igual a {{- maximum, datetime}}",
+        "not_inclusive": "Fecha debe ser menor a {{- maximum, datetime}}"
+      },
+      "number": {
+        "inclusive": "Número debe ser menor o igual a {{maximum}}",
+        "not_inclusive": "Número debe ser menor a {{maximum}}"
+      },
+      "set": {
+        "inclusive": "Valor inválido",
+        "not_inclusive": "Valor inválido"
+      },
+      "string": {
+        "inclusive": "No puede ser mayor a {{maximum}} letra(s)",
+        "not_inclusive": "Debe ser menor a {{maximum}} letra(s)"
+      }
+    },
+    "too_small": {
+      "array": {
+        "inclusive": "Array debe contener al igual {{minimum}} elemento(s)",
+        "not_inclusive": "Array debe contener más de {{minimum}} elemento(s)"
+      },
+      "date": {
+        "inclusive": "Fecha debe ser mayor o igual a {{- minimum, datetime}}",
+        "not_inclusive": "Fecha debe ser mayor a {{- minimum, datetime}}"
+      },
+      "number": {
+        "inclusive": "Número debe ser mayor o menos a {{minimum}}",
+        "not_inclusive": "Número debe ser mayou a {{minimum}}"
+      },
+      "set": {
+        "inclusive": "Valor inválido",
+        "not_inclusive": "Valor inválido"
+      },
+      "string": {
+        "inclusive": "Campo debe contener al menos {{minimum}} letra(s)",
+        "not_inclusive": "Campo debe contener más de {{minimum}} letra(s)"
+      }
+    },
+    "unrecognized_keys": "Key(s) no reconocidas en object: {{- keys}}"
+  },
+  "types": {
+    "array": "arreglo",
+    "bigint": "bigint",
+    "boolean": "boolean",
+    "date": "fecha",
+    "float": "Decimal",
+    "function": "función",
+    "integer": "Número Entero",
+    "map": "map",
+    "nan": "nan",
+    "never": "nunca",
+    "null": "null",
+    "number": "número",
+    "object": "objeto",
+    "promise": "promesa",
+    "set": "set",
+    "string": "valor",
+    "symbol": "symbolo",
+    "undefined": "undefined",
+    "unknown": "desconocido",
+    "void": "void"
+  },
+  "validations": {
+    "cuid": "cuid",
+    "email": "email",
+    "regex": "regex",
+    "url": "url",
+    "uuid": "uuid"
+  }
+}

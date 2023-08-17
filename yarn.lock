@@ -2564,6 +2564,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@hookform/resolvers@npm:^3.2.0":
+  version: 3.2.0
+  resolution: "@hookform/resolvers@npm:3.2.0"
+  peerDependencies:
+    react-hook-form: ^7.0.0
+  checksum: 041692117f1915ea23ab48f0eeaa4841ffb45f849b9743315ac4b05ae860a4ceb41adc55cf3c213aefe705b6b63b725d9a128c0ae7d15f5faca162e2a94a63d1
+  languageName: node
+  linkType: hard
+
 "@humanwhocodes/config-array@npm:^0.11.8":
   version: 0.11.10
   resolution: "@humanwhocodes/config-array@npm:0.11.10"
@@ -3883,6 +3892,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@root/client@workspace:packages/client"
   dependencies:
+    "@hookform/resolvers": ^3.2.0
     "@root/shared": "workspace:*"
     "@root/ui": "workspace:*"
     "@supabase/supabase-js": 2.26.0
@@ -3912,6 +3922,7 @@ __metadata:
     react-test-renderer: 18.2.0
     vitest: 0.31.0
     zod: 3.21.4
+    zod-i18n-map: ^2.14.0
   languageName: unknown
   linkType: soft
 
@@ -19278,6 +19289,16 @@ __metadata:
   version: 1.0.0
   resolution: "yocto-queue@npm:1.0.0"
   checksum: 2cac84540f65c64ccc1683c267edce396b26b1e931aa429660aefac8fbe0188167b7aee815a3c22fa59a28a58d898d1a2b1825048f834d8d629f4c2a5d443801
+  languageName: node
+  linkType: hard
+
+"zod-i18n-map@npm:^2.14.0":
+  version: 2.14.0
+  resolution: "zod-i18n-map@npm:2.14.0"
+  peerDependencies:
+    i18next: ">=21.3.0"
+    zod: ">=3.17.0"
+  checksum: 725adfcc233eda17761e9e359d1e4ded29be9648d77426a5c6ee3f1d3d7f45423d2578eaa32bd7d0f20a00abbf3270e598a25b306cb45ce0429b9555e0883088
   languageName: node
   linkType: hard
 
