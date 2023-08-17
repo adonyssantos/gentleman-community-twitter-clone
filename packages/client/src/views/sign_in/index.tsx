@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Container } from '@root/client/components/Container';
 import { useI18n } from '@root/client/hooks/useI18n';
 import { useZodForm } from '@root/client/hooks/useZodForm';
+import { loginSchema } from '@root/shared/validators/user.model';
 import { Button } from '@root/ui/common/Button';
 import { Divider } from '@root/ui/common/Divider';
 import { Typography } from '@root/ui/common/Typography';
@@ -19,19 +20,17 @@ export function SignInView() {
 
   const [isAlternative, setIsAlternative] = useState<boolean>(false);
 
-  const [altEmail, setAltEmail] = useState<string>('');
+  const [email, setEmail] = useState<string>('');
 
-  const altSchema = z.object({
-    alternative_email: z.string().email(),
-  });
+  const schema = loginSchema.pick({ email: true });
 
-  type AltSchema = z.infer<typeof altSchema>;
+  type Schema = z.infer<typeof schema>;
 
-  const form = useZodForm({ schema: altSchema });
+  const form = useZodForm({ schema: schema });
 
-  const alternativeSubmit = (data: AltSchema) => {
+  const alternativeSubmit = (data: Schema) => {
     setIsAlternative(true);
-    setAltEmail(data.alternative_email);
+    setEmail(data.email);
   };
   return (
     <Container className='flex min-h-screen max-w-md justify-between'>
@@ -57,7 +56,7 @@ export function SignInView() {
               <TextInput
                 label={t('alternative_email')}
                 control={form.control}
-                formField='alternative_email'
+                formField='email'
               />
               <Button variant='contained' onPress={form.handleSubmit(alternativeSubmit)}>
                 {t('next')}
@@ -67,7 +66,7 @@ export function SignInView() {
             </View>
           </View>
         ) : (
-          <Alternative email={altEmail} />
+          <Alternative email={email} />
         )}
 
         <View className='flex flex-row gap-1 pt-4'>

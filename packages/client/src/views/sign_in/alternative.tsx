@@ -1,6 +1,7 @@
 import { useAuthContext } from '@root/client/context/auth.context';
 import { useI18n } from '@root/client/hooks/useI18n';
 import { useZodForm } from '@root/client/hooks/useZodForm';
+import { loginSchema } from '@root/shared/validators/user.model';
 import { Button } from '@root/ui/common/Button';
 import { Divider } from '@root/ui/common/Divider';
 import { TextInput } from '@root/ui/forms/TextInput';
@@ -16,24 +17,18 @@ type AlternativeProps = {
 const Alternative = ({ email }: AlternativeProps) => {
   const { t } = useI18n(['signin']);
 
-  const schema = z.object({
-    alternative_email: z.string().email(),
-    alternative_password: z.string().min(8),
-  });
-
-  type Schema = z.infer<typeof schema>;
+  type Schema = z.infer<typeof loginSchema>;
 
   const form = useZodForm({
-    schema: schema,
+    schema: loginSchema,
     defaultValues: {
-      alternative_email: email,
+      email,
     },
   });
 
   const auth = useAuthContext();
 
-  const onSubmit = (data: Schema) =>
-    auth?.login({ email: data.alternative_email, password: data.alternative_password });
+  const onSubmit = ({ email, password }: Schema) => auth?.login({ email, password });
   return (
     <View className='flex flex-col'>
       <View className='flex flex-col gap-2'>
