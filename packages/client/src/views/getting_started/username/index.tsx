@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { Container } from '@root/client/components/Container';
+import { HeaderPage } from '@root/client/components/HeaderPage';
 import { useI18n } from '@root/client/hooks/useI18n';
 import { Button } from '@root/ui/common/Button';
-import { Typography } from '@root/ui/common/Typography';
 import { TextInput } from '@root/ui/forms/TextInput';
 import { ColorLogo } from '@root/ui/images/Logo/ColorLogo';
 import { View } from '@universal-labs/primitives';
@@ -30,30 +30,28 @@ export function UsernameView() {
 
   return (
     <Container className='flex min-h-screen max-w-md justify-between'>
-      <View className='flex flex-col space-y-5'>
+      <View className='flex flex-col space-y-4'>
         <View className='items-center p-4'>
           <ColorLogo size='small' />
         </View>
-        <View className='flex flex-col gap-2'>
-          <Typography variant='h4' className='!font-bold '>
-            {t('pickUsername.title')}
-          </Typography>
-          <Typography variant='subtitle1' className='text-slate-700'>
-            {t('pickUsername.subtitle')}
-          </Typography>
-        </View>
+        <HeaderPage
+          title={t('pickUsername.title')}
+          subtitle={t('pickUsername.subtitle')}
+          className='flex flex-col gap-2'
+        />
         <TextInput
           label={t('pickUsername.label')}
           control={form.control}
           formField='username'
-          defaultValue={defaultUsername}
+          defaultValue={suggest[0]}
         />
-        <View className='grid grid-flow-row grid-cols-4'>
+        <View className='flex flex-row flex-wrap gap-2'>
           {itemsRendered.map((item, index) => {
             return (
               <Button
                 key={index}
-                variant={'link'}
+                variant='link'
+                className='!p-0'
                 textCase='lowercase'
                 onPress={() => {
                   form.setValue('username', item);
@@ -68,7 +66,7 @@ export function UsernameView() {
           color={'primary'}
           align={'left'}
           variant={'link'}
-          textCase='capitalize'
+          textCase='normal-case'
           className='!p-0'
           onPress={() => {
             setShowMore(!showMore);
