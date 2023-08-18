@@ -39,6 +39,7 @@ export const authRouter = router({
     } else {
       throw new TRPCError({ message: 'Something went wrong', code: 'BAD_REQUEST' });
     }
+
     return { data, error };
   }),
 
