@@ -43,7 +43,6 @@ export function UsernameView() {
           label={t('pickUsername.label')}
           control={form.control}
           formField='username'
-          defaultValue={suggest[0]}
         />
         <View className='flex flex-row flex-wrap gap-2'>
           {itemsRendered.map((item, index) => {
