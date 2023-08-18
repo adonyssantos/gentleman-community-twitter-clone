@@ -9,7 +9,7 @@ import { View } from '@universal-labs/primitives';
 import { useForm } from 'react-hook-form';
 
 export function UsernameView() {
-  const { t } = useI18n(['gettingStarted', 'common']);
+  const { t } = useI18n(['getting_started', 'common']);
 
   // TODO: fetch this from trpc and user context
   const defaultUsername = 'defaultUserName';

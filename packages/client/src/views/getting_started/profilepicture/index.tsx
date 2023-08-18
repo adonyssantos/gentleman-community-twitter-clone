@@ -9,7 +9,7 @@ import { View } from '@universal-labs/primitives';
 
 export function ProfilePictureView() {
   const [imageUri, setImageUri] = useState<string | null>(null);
-  const { t } = useI18n(['gettingStarted', 'common']);
+  const { t } = useI18n(['getting_started', 'common']);
 
   return (
     <Container className='flex min-h-screen max-w-md justify-between'>
