@@ -41,7 +41,6 @@ export function SignInView() {
           <View className='flex flex-col gap-2'>
             <TextInput
               label={t('alternative')}
-              className=''
               control={form.control}
               formField='alternative'
             />
@@ -52,13 +51,15 @@ export function SignInView() {
         <View className='flex flex-row gap-1 pt-4'>
           <Typography variant='subtitle1' className='text-slate-700'>
             {t('do_not_have_an_account')}
-            <Link href={'sign_up'} className='text-primary-500'>
-              {t('sign_up')}
+            <Link href={'sign_up'} className='text-primary-500 ml-2'>
+              <Typography variant='subtitle1' color={'primary'}>
+                {t('sign_up')}
+              </Typography>
             </Link>
           </Typography>
         </View>
       </View>
-      <View className='' />
+      <View />
     </Container>
   );
 }
