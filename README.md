@@ -18,7 +18,7 @@ An **Open Source Project** made by the Gentleman Programming Community.
   - [Project Workspaces](#project-workspaces)
   - [Atomic Design Approach](#atomic-design-approach)
 
-# How to contribute?
+## How to contribute?
 
 If you want to contribute to this repository, simply follow our [contributing guidelines](CONTRIBUTING.md) and you will be good to go.
 
