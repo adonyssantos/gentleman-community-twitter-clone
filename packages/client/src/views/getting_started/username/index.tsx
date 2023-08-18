@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { Container } from '@root/client/components/Container';
+import { Header } from '@root/client/components/Header';
 import { HeaderPage } from '@root/client/components/HeaderPage';
 import { useI18n } from '@root/client/hooks/useI18n';
 import { Button } from '@root/ui/common/Button';
 import { TextInput } from '@root/ui/forms/TextInput';
-import { ColorLogo } from '@root/ui/images/Logo/ColorLogo';
 import { View } from '@universal-labs/primitives';
 import { useForm } from 'react-hook-form';
 
@@ -31,9 +31,10 @@ export function UsernameView() {
   return (
     <Container className='flex min-h-screen max-w-md justify-between'>
       <View className='flex flex-col space-y-4'>
-        <View className='items-center p-4'>
+        {/* <View className='items-center p-4'>
           <ColorLogo size='small' />
-        </View>
+        </View> */}
+        <Header />
         <HeaderPage
           title={t('pickUsername.title')}
           subtitle={t('pickUsername.subtitle')}
