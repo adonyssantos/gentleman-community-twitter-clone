@@ -27,7 +27,9 @@ export function SignUpView() {
             </Button>
           </View>
           <Divider>{t('or')}</Divider>
-          <Button variant='contained'>{t('create_account')}</Button>
+          <Link href={'create_account'}>
+            <Button variant='contained'>{t('create_account')}</Button>
+          </Link>
           <View className='flex flex-row justify-center p-1'>
             <Typography variant='caption' className=''>
               {t('agree')}

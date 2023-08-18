@@ -1,6 +1,6 @@
 import { ReactNode, createContext, useContext, useState } from 'react';
 import { passwordResetSchema } from '@root/shared/validators/password.model';
-import { loginSchema, singupSchema } from '@root/shared/validators/user.model';
+import { loginSchema, signupSchema } from '@root/shared/validators/user.model';
 import { Session } from '@supabase/supabase-js';
 import z from 'zod';
 import { trpc } from '../trpc';
@@ -10,7 +10,7 @@ export interface AuthContext {
   isLoading: boolean;
   userSession?: Session['user'];
   login: (data: z.infer<typeof loginSchema>) => Promise<any>;
-  singup: (data: z.infer<typeof singupSchema>) => Promise<any>;
+  singup: (data: z.infer<typeof signupSchema>) => Promise<any>;
   logout: () => Promise<any>;
   passwordReset: (data: z.infer<typeof passwordResetSchema>) => Promise<any>;
 }

@@ -3,6 +3,7 @@ const signin = require('../locales/en/signin.json');
 const password_reset = require('../locales/en/password_reset.json');
 const signup = require('../locales/es/signup.json');
 const validations = require('../locales/en/validations.json');
+const create_account = require('../locales/en/create_account.json');
 
 module.exports = {
   common,
@@ -10,4 +11,5 @@ module.exports = {
   password_reset,
   signup,
   validations,
+  create_account,
 };
