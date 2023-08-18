@@ -26,11 +26,13 @@ export function ProfilePictureView() {
           </Typography>
         </View>
         {/* image component */}
-        <ImagePicker onFinish={(uri) => setImageUri(uri)} />
-        <Button variant={!imageUri ? 'outlined' : 'contained'}>
-          {!imageUri ? t('common:skip') : t('common:finish')}
-        </Button>
+        <View className='flex w-full flex-col items-center pt-20'>
+          <ImagePicker onFinish={(uri) => setImageUri(uri)} />
+        </View>
       </View>
+      <Button variant={!imageUri ? 'outlined' : 'contained'}>
+        {!imageUri ? t('common:skip') : t('common:finish')}
+      </Button>
     </Container>
   );
 }

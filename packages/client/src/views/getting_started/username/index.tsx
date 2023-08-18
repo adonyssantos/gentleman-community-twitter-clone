@@ -8,29 +8,25 @@ import { ColorLogo } from '@root/ui/images/Logo/ColorLogo';
 import { View } from '@universal-labs/primitives';
 import { useForm } from 'react-hook-form';
 
-const suggest = [
-  'defaultUserName',
-  'username1',
-  'username2',
-  'username3',
-  'username4',
-  'username5',
-];
-
 export function UsernameView() {
   const { t } = useI18n(['gettingStarted', 'common']);
 
+  // TODO: fetch this from trpc and user context
+  const defaultUsername = 'defaultUserName';
+  const suggest = ['username1', 'username2', 'username3', 'username4', 'username5'];
+
   const form = useForm({
     defaultValues: {
-      username: suggest[0],
+      username: defaultUsername,
     },
   });
 
   const [showMore, setShowMore] = useState(false);
 
-  const itemsRendered = showMore ? suggest.slice(1, 6) : suggest.slice(1, 3);
+  const itemsRendered = showMore ? suggest.slice(0, 5) : suggest.slice(0, 2);
 
-  const isSuggested = form.watch('username') === suggest[0];
+  const isSuggested =
+    form.watch('username').toLocaleLowerCase() === defaultUsername.toLocaleLowerCase();
 
   return (
     <Container className='flex min-h-screen max-w-md justify-between'>
@@ -50,7 +46,7 @@ export function UsernameView() {
           label={t('pickUsername.label')}
           control={form.control}
           formField='username'
-          defaultValue={suggest[0]}
+          defaultValue={defaultUsername}
         />
         <View className='grid grid-flow-row grid-cols-4'>
           {itemsRendered.map((item, index) => {
@@ -81,7 +77,7 @@ export function UsernameView() {
           {showMore ? t('common:showLess') : t('common:showMore')}
         </Button>
       </View>
-      <Button variant={isSuggested ? 'outlined' : 'contained'}>
+      <Button variant={isSuggested ? 'outlined' : 'contained'} textCase='normal-case'>
         {isSuggested ? t('common:skip') : t('common:next')}
       </Button>
     </Container>
