@@ -1,10 +1,5 @@
-import {
-  loginSchema,
-  singupSchema,
-  usernameGeneratorInputSchema,
-  usernameGeneratorOutputSchema,
-  validateSchema,
-} from '@root/shared/validators/user.model';
+import { passwordResetSchema } from '@root/shared/validators/password.model';
+import { loginSchema, singupSchema, validateSchema } from '@root/shared/validators/user.model';
 import { TRPCError } from '@trpc/server';
 import { z } from 'zod';
 import { publicProcedure, router } from '../trpc';
@@ -15,6 +10,15 @@ export const authRouter = router({
     const { data, error } = await ctx.supabase.auth.signInWithPassword(input);
     return { data, error };
   }),
+
+  passwordReset: publicProcedure
+    .input(passwordResetSchema)
+    .mutation(async ({ input, ctx }) => {
+      const { email } = input;
+      const { data, error } = await ctx.supabase.auth.resetPasswordForEmail(email);
+
+      return { data, error };
+    }),
 
   logout: publicProcedure.mutation(async ({ ctx }) => ctx.supabase.auth.signOut()),
 

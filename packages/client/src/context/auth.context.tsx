@@ -1,4 +1,5 @@
 import { ReactNode, createContext, useContext, useState } from 'react';
+import { passwordResetSchema } from '@root/shared/validators/password.model';
 import { loginSchema, singupSchema } from '@root/shared/validators/user.model';
 import { Session } from '@supabase/supabase-js';
 import z from 'zod';
@@ -11,6 +12,7 @@ export interface AuthContext {
   login: (data: z.infer<typeof loginSchema>) => Promise<any>;
   singup: (data: z.infer<typeof singupSchema>) => Promise<any>;
   logout: () => Promise<any>;
+  passwordReset: (data: z.infer<typeof passwordResetSchema>) => Promise<any>;
 }
 
 export const AuthContext = createContext<AuthContext | null>(null);
@@ -46,6 +48,7 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
     },
   });
   const logout = trpc.auth.logout.useMutation();
+  const passwordReset = trpc.auth.passwordReset.useMutation();
   return (
     <AuthContext.Provider
       value={{
@@ -53,6 +56,7 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
         login: login.mutateAsync,
         logout: logout.mutateAsync,
         singup: singup.mutateAsync,
+        passwordReset: passwordReset.mutateAsync,
       }}
     >
       {children}
