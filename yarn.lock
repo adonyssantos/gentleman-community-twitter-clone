@@ -2289,29 +2289,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@expo/config-plugins@npm:~7.3.0":
-  version: 7.3.1
-  resolution: "@expo/config-plugins@npm:7.3.1"
-  dependencies:
-    "@expo/config-types": ^49.0.0-alpha.1
-    "@expo/json-file": ~8.2.37
-    "@expo/plist": ^0.0.20
-    "@expo/sdk-runtime-versions": ^1.0.0
-    "@react-native/normalize-color": ^2.0.0
-    chalk: ^4.1.2
-    debug: ^4.3.1
-    find-up: ~5.0.0
-    getenv: ^1.0.0
-    glob: 7.1.6
-    resolve-from: ^5.0.0
-    semver: ^7.5.3
-    slash: ^3.0.0
-    xcode: ^3.0.1
-    xml2js: 0.6.0
-  checksum: b3f3e8dc95f7f2c409494ce37c7a336127ef212015ed6c80aa2a3dfcb1e1dd30bfb0e763687dd6e836c2fc5dd7a81e0192b093a1474f6ba69b196011ee5a58df
-  languageName: node
-  linkType: hard
-
 "@expo/config-types@npm:^48.0.0":
   version: 48.0.0
   resolution: "@expo/config-types@npm:48.0.0"
@@ -2361,25 +2338,6 @@ __metadata:
     slugify: ^1.3.4
     sucrase: ^3.20.0
   checksum: 806117ea51c47263fe8940548ae286f2dfb59ac374f91819baaaebf5eac0f4174acbaf8c5488d1baf039ea5d841a95aefededb09a949a59b72bc4abee41a4839
-  languageName: node
-  linkType: hard
-
-"@expo/config@npm:~8.2.0":
-  version: 8.2.1
-  resolution: "@expo/config@npm:8.2.1"
-  dependencies:
-    "@babel/code-frame": ~7.10.4
-    "@expo/config-plugins": ~7.3.0
-    "@expo/config-types": ^49.0.0-alpha.1
-    "@expo/json-file": ^8.2.37
-    getenv: ^1.0.0
-    glob: 7.1.6
-    require-from-string: ^2.0.2
-    resolve-from: ^5.0.0
-    semver: 7.5.3
-    slugify: ^1.3.4
-    sucrase: ^3.20.0
-  checksum: 4f607d41701fd07b9e003198be740bc9430126fdc06eddbf75c2c7cbcd63d371943044d4feecead49868f79159da49af0b0c60fcd0918ee597b6a2e70195d9e6
   languageName: node
   linkType: hard
 
@@ -3969,7 +3927,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-navigation/native-stack@npm:^6.9.13":
+"@react-navigation/native-stack@npm:6.9.13":
   version: 6.9.13
   resolution: "@react-navigation/native-stack@npm:6.9.13"
   dependencies:
@@ -3985,7 +3943,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-navigation/native@npm:^6.1.7":
+"@react-navigation/native@npm:6.1.7":
   version: 6.1.7
   resolution: "@react-navigation/native@npm:6.1.7"
   dependencies:
@@ -4030,7 +3988,6 @@ __metadata:
     "@universal-labs/styled": 2.0.3
     "@vitejs/plugin-react-swc": 3.2.0
     class-variance-authority: 0.6.0
-    expo-constants: ^14.4.2
     happy-dom: 9.10.9
     i18next: 22.5.1
     i18next-browser-languagedetector: 7.0.2
@@ -9198,18 +9155,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"expo-constants@npm:^14.4.2":
-  version: 14.5.1
-  resolution: "expo-constants@npm:14.5.1"
-  dependencies:
-    "@expo/config": ~8.2.0
-    uuid: ^3.3.2
-  peerDependencies:
-    expo: "*"
-  checksum: 9a88942b5aec3a58dc62bcd2eb1c14dcb5af6657fdb416838476e760050cf60d6e59f06a33667f15f8115aa1383f96fba9fb1f99043d35be19fc2d33fb561a4f
-  languageName: node
-  linkType: hard
-
 "expo-constants@npm:~14.2.1":
   version: 14.2.1
   resolution: "expo-constants@npm:14.2.1"
@@ -13813,8 +13758,8 @@ __metadata:
   resolution: "mobile@workspace:apps/mobile"
   dependencies:
     "@babel/core": 7.20.2
-    "@react-navigation/native": ^6.1.7
-    "@react-navigation/native-stack": ^6.9.13
+    "@react-navigation/native": 6.1.7
+    "@react-navigation/native-stack": 6.9.13
     "@root/client": "workspace:*"
     "@root/server": "workspace:*"
     "@root/shared": "workspace:*"
@@ -16900,17 +16845,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"semver@npm:7.5.3":
-  version: 7.5.3
-  resolution: "semver@npm:7.5.3"
-  dependencies:
-    lru-cache: ^6.0.0
-  bin:
-    semver: bin/semver.js
-  checksum: 9d58db16525e9f749ad0a696a1f27deabaa51f66e91d2fa2b0db3de3e9644e8677de3b7d7a03f4c15bc81521e0c3916d7369e0572dbde250d9bedf5194e2a8a7
-  languageName: node
-  linkType: hard
-
 "semver@npm:7.x, semver@npm:^7.0.0, semver@npm:^7.1.1, semver@npm:^7.3.2, semver@npm:^7.3.4, semver@npm:^7.3.5, semver@npm:^7.3.7":
   version: 7.5.1
   resolution: "semver@npm:7.5.1"
@@ -16928,17 +16862,6 @@ __metadata:
   bin:
     semver: ./bin/semver.js
   checksum: 1b26ecf6db9e8292dd90df4e781d91875c0dcc1b1909e70f5d12959a23c7eebb8f01ea581c00783bbee72ceeaad9505797c381756326073850dc36ed284b21b9
-  languageName: node
-  linkType: hard
-
-"semver@npm:^7.5.3":
-  version: 7.5.4
-  resolution: "semver@npm:7.5.4"
-  dependencies:
-    lru-cache: ^6.0.0
-  bin:
-    semver: bin/semver.js
-  checksum: 12d8ad952fa353b0995bf180cdac205a4068b759a140e5d3c608317098b3575ac2f1e09182206bf2eb26120e1c0ed8fb92c48c592f6099680de56bb071423ca3
   languageName: node
   linkType: hard
 
@@ -19444,16 +19367,6 @@ __metadata:
     sax: ">=0.6.0"
     xmlbuilder: ~11.0.0
   checksum: ca0cf2dfbf6deeaae878a891c8fbc0db6fd04398087084edf143cdc83d0509ad0fe199b890f62f39c4415cf60268a27a6aed0d343f0658f8779bd7add690fa98
-  languageName: node
-  linkType: hard
-
-"xml2js@npm:0.6.0":
-  version: 0.6.0
-  resolution: "xml2js@npm:0.6.0"
-  dependencies:
-    sax: ">=0.6.0"
-    xmlbuilder: ~11.0.0
-  checksum: 437f353fd66d367bf158e9555a0625df9965d944e499728a5c6bc92a54a2763179b144f14b7e1c725040f56bbd22b0fa6cfcb09ec4faf39c45ce01efe631f40b
   languageName: node
   linkType: hard
 
