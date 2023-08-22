@@ -10,9 +10,11 @@ module.exports = function (api) {
           alias: {
             '@root/client': '../../packages/client/src',
             '@root/ui': '../../packages/ui/src',
+            '@root/shared': '../../packages/shared/src',
           },
         },
       ],
+      ['react-native-reanimated/plugin'],
     ],
   };
 };
