@@ -7,6 +7,7 @@ const workspaceRoot = path.resolve(__dirname, '../..');
 const monorepoPackages = {
   '@root/client': path.resolve(workspaceRoot, 'packages/client'),
   '@root/ui': path.resolve(workspaceRoot, 'packages/ui'),
+  '@root/shared': path.resolve(workspaceRoot, 'packages/shared'),
 };
 const config = getDefaultConfig(projectRoot);
 config.watchFolders = [workspaceRoot];
