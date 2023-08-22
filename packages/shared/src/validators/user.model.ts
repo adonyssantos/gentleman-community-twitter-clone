@@ -1,7 +1,5 @@
 import { z } from 'zod';
 
-export const userSchema = z.object({ email: z.string().email(), password: z.string() });
-
 export const singupSchema = z.object({
   name: z.string(),
   email: z.string().email(),
@@ -21,3 +19,11 @@ export const usernameGeneratorInputSchema = z.object({
 });
 
 export const usernameGeneratorOutputSchema = z.array(z.string());
+
+export const updateSchema = z.object({
+  id: z.string(),
+  name: z.string().optional(),
+  email: z.string().email().optional(),
+  username: z.string().optional(),
+});
+

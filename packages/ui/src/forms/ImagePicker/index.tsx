@@ -1,6 +1,9 @@
+import * as React from 'react';
 import { CameraIcon } from '@root/ui/icons/CameraIcon';
 import { UserCircle } from '@root/ui/icons/UserCircle';
 import { Pressable, Span, View } from '@universal-labs/primitives';
+import { manipulateAsync } from 'expo-image-manipulator';
+import { ImageResult, SaveFormat } from 'expo-image-manipulator/build/ImageManipulator.types';
 import { launchImageLibraryAsync } from 'expo-image-picker';
 import { MediaTypeOptions } from 'expo-image-picker/build/ImagePicker.types';
 
@@ -8,8 +11,13 @@ interface ContainerProps {
   onPress: () => void;
 }
 
-interface Props {
-  onFinish: (uri: string) => void;
+interface ImagePickerProps {
+  onFinish: ({ blob, file }: PickProps) => void;
+}
+
+export interface PickProps {
+  blob: Blob;
+  file: ImageResult;
 }
 
 const ImageContainer = ({ onPress }: ContainerProps) => {
@@ -27,24 +35,46 @@ const ImageContainer = ({ onPress }: ContainerProps) => {
   );
 };
 
-export const ImagePicker = ({ onFinish }: Props) => {
-  const pickImage = async () => {
-    let result = await launchImageLibraryAsync({
-      mediaTypes: MediaTypeOptions.Images,
-      allowsEditing: true,
-      aspect: [1, 1],
-      quality: 1,
-    });
-
-    if (!result.canceled) {
-      const uri = result.assets[0].uri;
-      onFinish(uri);
-    }
+export const ImagePicker = ({ onFinish }: ImagePickerProps) => {
+  const onPress = async () => {
+    const res = await pickImage();
+    onFinish(res);
   };
+  const pickImage = async () => {
+    // eslint-disable-next-line no-async-promise-executor
+    return new Promise<{ blob: Blob; file: ImageResult }>(async (resolve, reject) => {
+      let result = await launchImageLibraryAsync({
+        mediaTypes: MediaTypeOptions.Images,
+        allowsEditing: true,
+        aspect: [1, 1],
+        quality: 1,
+      });
 
+      const sizedImage = await manipulateAsync(
+        result.assets![0].uri,
+        [
+          {
+            resize: { width: 800 },
+          },
+        ],
+        {
+          format: SaveFormat.PNG,
+          compress: 1,
+        },
+      );
+
+      if (sizedImage.uri) {
+        const response = await fetch(sizedImage.uri);
+        const blob = await response.blob();
+        resolve({ blob, file: sizedImage });
+      } else {
+        reject(false);
+      }
+    });
+  };
   return (
     <>
-      <ImageContainer onPress={pickImage} />
+      <ImageContainer onPress={onPress} />
     </>
   );
 };

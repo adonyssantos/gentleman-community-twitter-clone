@@ -20,6 +20,7 @@ const nextConfig = {
     'react-native',
     'expo-image-picker',
     'expo-modules-core',
+    'expo-image-manipulator',
   ],
   // i18n
   i18n: {

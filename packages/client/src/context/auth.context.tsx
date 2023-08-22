@@ -8,7 +8,7 @@ import { trpc } from '../trpc';
 export interface AuthContext {
   isAuth: boolean;
   isLoading: boolean;
-  userSession?: Session['user'];
+  session?: Session;
   login: (data: z.infer<typeof loginSchema>) => Promise<any>;
   singup: (data: z.infer<typeof singupSchema>) => Promise<any>;
   logout: () => Promise<any>;
@@ -26,7 +26,7 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
   const [state, dispatch] = useState({
     isAuth: false,
     isLoading: true,
-    userSession: undefined as AuthContext['userSession'],
+    session: undefined as AuthContext['session'],
   });
 
   const singup = trpc.auth.singup.useMutation({
@@ -34,7 +34,7 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
       dispatch({
         isAuth: true,
         isLoading: false,
-        userSession: data.session!.user!,
+        session: data.session!,
       });
     },
   });
@@ -43,7 +43,7 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
       dispatch({
         isAuth: true,
         isLoading: false,
-        userSession: data.session!.user!,
+        session: data.session!,
       });
     },
   });
