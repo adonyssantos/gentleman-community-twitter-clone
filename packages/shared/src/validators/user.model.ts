@@ -26,4 +26,3 @@ export const updateSchema = z.object({
   email: z.string().email().optional(),
   username: z.string().optional(),
 });
-
