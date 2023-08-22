@@ -10,6 +10,7 @@ export interface ButtonProps extends PressableProps, VariantProps<typeof button>
   startIcon?: ReactNode;
   endIcon?: ReactNode;
   children?: ReactNode;
+  textCase?: 'uppercase' | 'lowercase' | 'normal-case' | 'capitalize';
 }
 
 export function Button({
@@ -18,14 +19,16 @@ export function Button({
   size,
   variant,
   children,
+  align,
+  textCase = 'uppercase',
   endIcon,
   startIcon,
   ...props
 }: ButtonProps) {
   return (
-    <Pressable className={button({ color, size, variant, className })} {...props}>
+    <Pressable className={button({ color, size, variant, align, className })} {...props}>
       {startIcon && <Span className='mr-2 '>{startIcon}</Span>}
-      <Typography variant='button' color='inherit' align='center'>
+      <Typography variant='button' color='inherit' align={align} className={textCase}>
         {children}
       </Typography>
       {endIcon && <Span className='ml-2'>{endIcon}</Span>}

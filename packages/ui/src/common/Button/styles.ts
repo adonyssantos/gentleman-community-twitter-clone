@@ -1,7 +1,7 @@
 import { cva } from 'class-variance-authority';
 
 export const button = cva(
-  'rounded-full transition-all duration-200 my-2 mx-1 flex flex-row items-center justify-center',
+  'rounded-full transition-all duration-200 my-2 mx-1 flex flex-row items-center',
   {
     variants: {
       color: {
@@ -15,6 +15,12 @@ export const button = cva(
         contained: 'border-transparent',
         outlined: 'bg-transparent',
         text: 'bg-transparent text-primary-500',
+        link: 'bg-transparent text-primary-500 hover:underline px-0',
+      },
+      align: {
+        left: 'justify-start',
+        center: 'justify-center',
+        right: 'justify-end',
       },
     },
     compoundVariants: [
@@ -39,6 +45,7 @@ export const button = cva(
       color: 'primary',
       size: 'medium',
       variant: 'text',
+      align: 'center',
     },
   },
 );

@@ -1,3 +1,8 @@
 {
-  "hello": "hola mundo"
+  "hello": "hola mundo",
+  "showMore": "Mostrar más",
+  "showLess": "Mostrar menos",
+  "next": "Siguiente",
+  "skip": "Saltar por ahora",
+  "finish": "Terminar"
 }
